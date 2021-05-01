@@ -142,7 +142,7 @@ class App extends Component {
     console.log(this.state.id);
     const { page, user } = this.state;
       return (
-        <Router>
+        <Router basename={process.env.PUBLIC_URL} >
             <Navbar className="green-background">
                 <div className="container" id="nav-bar">
                     <Link className="link" to="/">verdancy</Link>

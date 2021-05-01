@@ -1,0 +1,323 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+
+body {
+  font-family: "Inter", Helvetica, Arial, sans-serif;
+  font-size: 16pt;
+  color: #373A3C;
+  background-color: #ffffff;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}
+
+h1 {
+  font-size: 64pt;
+  font-weight: bold;
+  padding-top: 64px;
+}
+
+h2 {
+  font-size: 40pt;
+  font-weight: bold;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+h3 {
+  font-size: 24pt;
+  font-weight: bold;
+}
+
+section, .content-header {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.link:hover, .nav-button:hover {
+  text-decoration: none;
+}
+
+.green-background {
+  color: #ffffff;
+  background-color: #679967;
+}
+
+.darkgreen-background, .darkgreen-button, .darkgreen-button:hover, .darkgreen-button:active, .darkgreen-button:focus {
+  color: #ffffff;
+  background-color: #194B19;
+}
+
+.cream-background, .cream-button, .cream-button:hover, .cream-button:active, .cream-button:focus {
+  color: #373A3C;
+  background-color: #F4EBC2;
+}
+
+.darkgreen-text, #nav-bar .link:hover {
+  color: #194B19;
+}
+
+.white-text, .green-background .link, .darkgreen-button .nav-button {
+  color: #ffffff;
+}
+
+.black-text, .cream-button .nav-button, #home-background .link {
+  color: #373A3C;
+}
+
+.green-text {
+  color: #679967;
+}
+
+.btn, .btn:active {
+  border: none;
+}
+
+.btn:hover {
+  font-weight: bold;
+}
+
+.centered {
+  display: inline-block;
+  width: auto;
+  text-align: center;
+}
+
+/* hacky way to center images when doing a side-by-side */
+.left-stuff {
+  margin-right: 15%;
+}
+
+/* navbar */
+
+#nav-bar {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+#nav-links .link, #nav-links .btn {
+  margin-left: 48px;
+}
+
+/* home page */
+
+#home-background {
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("https://raw.githubusercontent.com/annazhoufast/plantastic/main/client/src/imgs/home/cover.png?token=AKMRZNUTPHM4QZJOHM27RNDASTARW");
+  background-position: center;
+  background-size: cover;
+  color: #ffffff;
+}
+
+#main-title h2 {
+  padding: 0;
+  font-weight: normal;
+}
+
+/* makes the title text wrap
+#title-desc {
+  width: 65%;
+}
+*/
+
+.background-num {
+  font-size: 34pt;
+  font-weight: bold;
+  color: #194B19;
+}
+
+#background-desc {
+  width: 47%;
+}
+
+#background-img {
+  width: 35%;
+  height: 35%;
+  margin-top: 10%;
+}
+
+.individ-step {
+  width: 60%;
+  margin: auto;
+}
+
+#team-img {
+  width: 80%;
+}
+
+/* database */
+
+.full-img {
+    width: 100%;
+    object-fit: cover;
+    max-height: 260px;
+}
+
+.db-plant, .harvest-card {
+    padding-bottom: 2rem;
+}
+
+.db-row {
+    /* margin-left: 0.5rem;
+    margin-right: 0.5rem; */
+    /* padding-left: 1rem;
+    padding-right: 1rem; */
+    /* padding-bottom: 2rem; */
+}
+
+.searchbar {
+    padding-bottom: 1rem;
+}
+
+.search {
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+.card {
+    height: 28rem;
+}
+
+/* specific plant */
+
+.img-100 {
+    width: 100%;
+}
+
+.line {
+    border-top: 1px solid black;
+}
+
+.add-button {
+    float: right;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.col, .col-lg-7 {
+    padding-left: 0px;
+}
+
+.green-btn{
+    color: #ffffff;
+  background-color:  #194B19;
+}
+
+.pad-top {
+    padding-top: 5rem;
+}
+
+.plant-name {
+    font-size: 48pt;
+}
+
+.font-size-14 {
+    font-size: 14pt;
+}
+
+.font-size-16 {
+    font-size: 16pt;
+}
+
+/* garden */
+ .harvest-card .card{
+    min-height: 20rem;
+    height: 20rem;
+}
+
+.col-lg-5 {
+    padding-left: 0px;
+    /* padding-right: 0px; */
+}
+
+.garden-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+}
+
+.harvest-card .col {
+    padding-bottom: 2rem;
+}
+
+.outline {
+    /* border:#373A3C 1px 1px 1px 1px; */
+    /* border-style: solid; */
+    border: 0.1px solid #DEE2E6;
+    border-radius: 5px;
+}
+
+.harvest {
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+    padding-left: 15px;
+    padding-right: 30px;
+}
+
+/* this is very hacky but im too lazy to figure out how to center things */
+.add-more {
+    padding-top: 2.5rem;
+}
+
+/* advice */
+
+#advice-card {
+  width: 25%;
+  margin: 3%;
+  border-radius: 35px;
+  filter:drop-shadow(5px 5px 5px #C8C8C8);
+}
+
+/* hacky way to center */
+#advice-card h3 {
+  padding-top: 60%;
+}
+
+/* hacky way to center */
+#advice-row {
+  margin-left: 5%;
+}
+
+/* emissions */
+
+#emissions-num {
+  padding: 0;
+}
+
+#emissions-img {
+  width: 30%;
+}
+
+.medium-text {
+  font-size: 34pt;
+}
+
+.emissions-header {
+  width: 50%;
+  padding-bottom: 5%;
+}
+
+.conversion {
+  width: 30%;
+  margin: auto;
+}
+
+.conversion-num {
+  font-size: 34pt;
+  font-weight: bold;
+  padding-top: 24px;
+}
+
+/* sign in */
+.centered-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }

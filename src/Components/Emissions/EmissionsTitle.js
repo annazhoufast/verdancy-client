@@ -8,12 +8,12 @@ export class EmissionsTitle extends React.Component {
         return (
           <section className="green-background">
             <div className="container">
-              <Row>
+              <Row className="row">
                 <div className="left-stuff">
-                    <div className="content-header">
+                    <div className="page-header">
                       <h2>my emissions</h2>
                     </div>
-                    <h1 id="emissions-num">{this.props.emissions}<span className="medium-text"> g <span className="darkgreen-text">CO2e saved</span></span></h1>
+                    <h1 id="emissions-num" className="page-content">{this.props.emissions}<span className="medium-text"> g <span className="darkgreen-text">CO2e saved</span></span></h1>
                 </div>
                 <img src="https://raw.githubusercontent.com/annazhoufast/plantastic/main/client/src/imgs/emissions/emissions.png?token=AKMRZNVM4NTROVTZO5U7IMTASSJGC"
                 alt="woman holding up a globe" id="emissions-img"/>

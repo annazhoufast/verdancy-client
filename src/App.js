@@ -12,6 +12,7 @@ import {Advice} from './Components/Advice/Advice';
 import {Emissions} from './Components/Emissions/Emissions';
 import {Garden} from './Components/Garden/Garden';
 import {Search} from './Components/Search/Search';
+import {LandingPage} from './Components/LandingPage/LandingPage';
 import SignUp from './Components/Auth/Components/SignUp/SignUp';
 import SignIn from './Components/Auth/Components/SignIn/SignIn';
 import Auth from './Components/Auth/Auth';
@@ -143,9 +144,10 @@ class App extends Component {
     const { page, user } = this.state;
       return (
         <Router basename={process.env.PUBLIC_URL} >
+
             <Navbar className="green-background">
                 <div className="container" id="nav-bar">
-                    <Link className="link" to="/">Verdancy</Link>
+                    <Link className="link" to="/">verdancy</Link>
                     <div id="nav-links">
                         <Link className="link" to="/advice">advice</Link>
                         <Link className="link" to="/search">search</Link>
@@ -160,8 +162,10 @@ class App extends Component {
                     </div>
                 </div>
             </Navbar>
+
             <Switch>
                 <Route exact path="/" component={Home}></Route>
+                <Route exact path="/landing" component={LandingPage}></Route>
                 <Route exact path="/advice" component={Advice}></Route>
                 <Route exact path="/emissions">
                 {user ? <Emissions />:
@@ -191,8 +195,13 @@ class App extends Component {
                 </Route>
                 {/* this is terrible code im sorry but i cant think of anything else */}
                 {this.state.singlePlants}
-
             </Switch>
+
+            <Navbar className="green-background">
+                <div className="container centered" id="footer">
+                    <Link className="link" to="/landing">Learn more about our team and our project!</Link>
+                </div>
+            </Navbar>
 
         </Router>
 

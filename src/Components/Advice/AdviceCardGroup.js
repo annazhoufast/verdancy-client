@@ -10,7 +10,7 @@ export class AdviceCardGroup extends React.Component {
             cards.push(<AdviceCard/>)
         }
         return(
-            <div>
+            <div className="page-content">
                 <Row id="advice-row">
                   {cards}
                 </Row>

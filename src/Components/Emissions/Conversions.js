@@ -42,13 +42,13 @@ export class Conversions extends React.Component {
                           <img src="https://raw.githubusercontent.com/annazhoufast/plantastic/main/client/src/imgs/emissions/plastic.png?token=AKMRZNSZ4NFFMHK3VTYPO6LASTFRQ"
                           alt="plastic icon" className="individ-step"/>
                           <p className="conversion-num">{plastic} lbs</p>
-                          <p>of plastic saved</p>
+                          <p>of plastic</p>
                       </div>
                       <div className="conversion centered">
                           <img src="https://raw.githubusercontent.com/annazhoufast/plantastic/main/client/src/imgs/emissions/water.png?token=AKMRZNRF54GF2ALQRH735I3ASTFSI"
                           alt="water icon" className="individ-step"/>
                           <p className="conversion-num">{water} gal</p>
-                          <p>of water saved</p>
+                          <p>of water</p>
                       </div>
                   </Row>
                 </div>

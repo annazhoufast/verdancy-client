@@ -133,10 +133,10 @@ class App extends Component {
         //         });
         // }
         // console.log(this.state.userPlants);
-    
+
     }
 
-    
+
 
   render() {
     console.log(this.state.id);
@@ -145,7 +145,7 @@ class App extends Component {
         <Router basename={process.env.PUBLIC_URL} >
             <Navbar className="green-background">
                 <div className="container" id="nav-bar">
-                    <Link className="link" to="/">verdancy</Link>
+                    <Link className="link" to="/">Verdancy</Link>
                     <div id="nav-links">
                         <Link className="link" to="/advice">advice</Link>
                         <Link className="link" to="/search">search</Link>
@@ -164,12 +164,12 @@ class App extends Component {
                 <Route exact path="/" component={Home}></Route>
                 <Route exact path="/advice" component={Advice}></Route>
                 <Route exact path="/emissions">
-                {user ? <Emissions />: 
+                {user ? <Emissions />:
                         <PleaseSignIn />
                     }
                 </Route>
                 <Route exact path="/garden">
-                    {user ? <Garden plants={this.state.userPlants} /> : 
+                    {user ? <Garden plants={this.state.userPlants} /> :
                         <PleaseSignIn />
                     }
                 </Route>
@@ -180,7 +180,7 @@ class App extends Component {
                     {user ? <SignOutButton setUser={this.setUser} setAuthToken={this.setAuthToken} />
                         :
                         <SignIn setPage={this.setPage} setAuthToken={this.setAuthToken} setUser={this.setUser} />
-                    
+
                     }
                 </Route>
                 <Route exact path="/signup">
@@ -191,7 +191,7 @@ class App extends Component {
                 </Route>
                 {/* this is terrible code im sorry but i cant think of anything else */}
                 {this.state.singlePlants}
-    
+
             </Switch>
 
         </Router>

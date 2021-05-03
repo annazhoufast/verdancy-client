@@ -103,13 +103,29 @@ section {
 
 /* navbar and footer*/
 
-#nav-bar, #footer {
+#nav-bar {
   padding-top: 24px;
   padding-bottom: 24px;
 }
 
+#footer {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
 #nav-links .link, #nav-links .btn {
   margin-left: 48px;
+}
+
+/* still not centered ugh */
+#footer-links {
+  width: 100%;
+  margin: auto;
+}
+
+#footer img {
+  width: 25%;
+  margin-top: 48px;
 }
 
 /* home page */
@@ -285,13 +301,19 @@ section {
 }
 
 /* hacky way to center */
+
+#advice {
+  padding-bottom: 0;
+}
+
 #advice-card h3 {
   padding-top: 60%;
 }
 
-/* hacky way to center */
+/* still not centered */
 #advice-row {
-  margin-left: 5%;
+  width: 100%;
+  margin: auto;
 }
 
 /* emissions */

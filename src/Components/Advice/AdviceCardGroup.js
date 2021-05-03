@@ -10,11 +10,15 @@ export class AdviceCardGroup extends React.Component {
             cards.push(<AdviceCard/>)
         }
         return(
-            <div className="page-content">
-                <Row id="advice-row">
+          <section className="centered" id="advice">
+            <div className="container centered">
+              <div className="centered">
+                <Row id="advice-row" className="centered">
                   {cards}
                 </Row>
+              </div>
             </div>
+          </section>
         )
     }
 }

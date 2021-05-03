@@ -197,11 +197,19 @@ class App extends Component {
                 {this.state.singlePlants}
             </Switch>
 
-            <Navbar className="green-background">
-                <div className="container centered" id="footer">
+            <section className="green-background" id="footer">
+              <div className="container">
+                <div className="centered" id="footer-links">
+                  <div>
                     <Link className="link" to="/landing">Learn more about our team and our project!</Link>
+                  </div>
+                  <div>
+                    <img src="https://raw.githubusercontent.com/annazhoufast/verdancy-client/main/src/imgs/landing/ischool.png?token=AKMRZNWG2D6W6FHVVNTEUWDATCKZE"
+                    alt="iSchool logo"/>
+                  </div>
                 </div>
-            </Navbar>
+              </div>
+            </section>
 
         </Router>
 

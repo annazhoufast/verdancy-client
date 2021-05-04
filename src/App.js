@@ -145,7 +145,7 @@ class App extends Component {
       return (
         <Router basename={process.env.PUBLIC_URL} >
 
-            <Navbar className="green-background">
+            <Navbar className="darkgreen-background">
                 <div className="container" id="nav-bar">
                     <Link className="link" to="/">verdancy</Link>
                     <div id="nav-links">
@@ -153,7 +153,7 @@ class App extends Component {
                         <Link className="link" to="/search">search</Link>
                         <Link className="link" to="/emissions">my emissions</Link>
                         <Link className="link" to="/garden">my garden</Link>
-                        <Button className="darkgreen-button">
+                        <Button className="green-button">
                             <Link to="/signup" className="nav-button">Get Started</Link>
                         </Button>
                         <Button className="cream-button">
@@ -197,7 +197,7 @@ class App extends Component {
                 {this.state.singlePlants}
             </Switch>
 
-            <section className="green-background" id="footer">
+            <section className="darkgreen-background" id="footer">
               <div className="container">
                 <div className="centered" id="footer-links">
                   <div>

@@ -51,12 +51,12 @@ section {
   text-decoration: none;
 }
 
-.green-background {
+.green-background, .green-button, .green-button:hover, .green-button:active, .green-button:focus {
   color: #ffffff;
   background-color: #679967;
 }
 
-.darkgreen-background, .darkgreen-button, .darkgreen-button:hover, .darkgreen-button:active, .darkgreen-button:focus {
+.darkgreen-background {
   color: #ffffff;
   background-color: #194B19;
 }
@@ -66,11 +66,11 @@ section {
   background-color: #F4EBC2;
 }
 
-.darkgreen-text, #nav-bar .link:hover, #footer .link:hover {
+.darkgreen-text {
   color: #194B19;
 }
 
-.white-text, .green-background .link, .darkgreen-button .nav-button {
+.white-text, .darkgreen-background .link, .green-button .nav-button {
   color: #ffffff;
 }
 
@@ -125,7 +125,7 @@ section {
 
 #footer img {
   width: 25%;
-  margin-top: 48px;
+  padding-top: 48px;
 }
 
 /* home page */
@@ -161,7 +161,7 @@ section {
 #background-img {
   width: 35%;
   height: 35%;
-  margin-top: 10%;
+  padding-top: 10%;
 }
 
 .individ-step {
@@ -306,10 +306,6 @@ section {
   padding-bottom: 0;
 }
 
-#advice-card h3 {
-  padding-top: 60%;
-}
-
 /* still not centered */
 #advice-row {
   width: 100%;
@@ -355,3 +351,14 @@ section {
     transform: translate(-50%, -50%);
     color: white;
   }
+
+/* please sign in to view this page */
+#please-sign-in img {
+  padding-top: 48px;
+  width: 15%;
+}
+
+#please-sign-in div {
+  margin: auto;
+  width: 100%;
+}

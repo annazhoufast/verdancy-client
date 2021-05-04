@@ -295,9 +295,14 @@ section {
 
 #advice-card {
   width: 25%;
+  height: 50%;
   margin: 3%;
   border-radius: 35px;
   filter:drop-shadow(5px 5px 5px #C8C8C8);
+}
+
+#advice-card img {
+  width: 100%;
 }
 
 /* hacky way to center */

@@ -10,32 +10,50 @@ export class Emissions extends React.Component {
             error: null,
             isLoaded: false,
             totalEm: 0,
-            auth: localStorage.getItem("Authorization")
+            auth: localStorage.getItem("Authorization"),
+            gardenD: []
         }
     }
 
-    componentDidMount() {
-        fetch("https://verdancy.capstone.ischool.uw.edu/v1/emissions/", {
-            method: 'GET',
-            headers: new Headers({
-                'Authorization': this.state.auth
+    async componentDidMount() {
+        let [emissions] = await Promise.all([
+            fetch("https://verdancy.capstone.ischool.uw.edu/v1/emissions/", {
+                method: 'GET',
+                headers: new Headers({
+                    'Authorization': this.state.auth
+                })
             })
-        })
-            .then(res => res.json())
-            .then(
-                (result) => {
-                    this.setState({
-                        isLoaded: true,
-                        totalEm: result.Emissions
-                    });
-                },
-                (error) => {
-                    this.setState({
-                        isLoaded: true,
-                        error
-                    });
-                }
-            )
+                .then(res => res.json())
+        ]);
+
+        this.setState({
+            totalEm: emissions.Emissions
+        });
+
+        // console.log(garden);
+
+        
+        // fetch("https://verdancy.capstone.ischool.uw.edu/v1/emissions/", {
+        //     method: 'GET',
+        //     headers: new Headers({
+        //         'Authorization': this.state.auth
+        //     })
+        // })
+        //     .then(res => res.json())
+        //     .then(
+        //         (result) => {
+        //             this.setState({
+        //                 isLoaded: true,
+        //                 totalEm: result.Emissions
+        //             });
+        //         },
+        //         (error) => {
+        //             this.setState({
+        //                 isLoaded: true,
+        //                 error
+        //             });
+        //         }
+        //     )
     }
 
     render() {
@@ -44,7 +62,7 @@ export class Emissions extends React.Component {
 
               <EmissionsTitle emissions={this.state.totalEm} />
               <Conversions emissions={this.state.totalEm} />
-              <Breakdown />
+              <Breakdown  />
 
             </body>
         )

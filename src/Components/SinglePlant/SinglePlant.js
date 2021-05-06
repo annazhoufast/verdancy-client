@@ -19,7 +19,7 @@ export class SinglePlant extends React.Component {
             auth: localStorage.getItem("Authorization"),
             id: this.props.id
         };
-        
+
     }
 
     componentDidMount() {
@@ -61,7 +61,7 @@ export class SinglePlant extends React.Component {
     }
 
     render() {
-        
+
 
         const {error, isLoaded, items} = this.state;
         if (error) {
@@ -70,67 +70,69 @@ export class SinglePlant extends React.Component {
             return <div>Loading...</div>;
         } else {
             return(
-                <div className="pad-top">
-                    <Container>
-                        <Row>
-                            <Col>
-                                <h1 className="plant-name">{items.PlantName}</h1>
-                            </Col>
-                            <Col className="add">
-                                {this.state.auth ? 
-                                    <Button variant="primary" size="lg" className="add-button green-btn" onClick={this.addToGarden}>+ add to garden</Button>
-                                        :
-                                    <div />
-                                }
-                                
-                            </Col>
-                        </Row>
-                        <Row>
-                            <p className="darkgreen-text">{items.CO2PerUnit} g CO2e saved per tomato | Gardening Difficulty: {items.Difficulty} | Zones: {items.ZoneStart} - {items.ZoneEnd} | Height: {items.Height}</p>
-                        </Row>
-                    </Container>
+                <section>
+                  <div className="container">
+                      <Container>
+                          <Row>
+                              <Col>
+                                  <h2>{items.PlantName}</h2>
+                              </Col>
+                              <Col className="add">
+                                  {this.state.auth ?
+                                      <Button variant="primary" size="lg" className="add-button green-button" onClick={this.addToGarden}>+ add to garden</Button>
+                                          :
+                                      <div />
+                                  }
 
-                    <Container>
-                        <Row>
-                            <Col lg={7}>
-                                <p className="font-size-14">{items.Descr}</p>
-                                {/* <p>Height: {items.Height}</p> */}
-                                <h3>Plant Care</h3>
-                                <hr className="line"></hr>
-                                <Container>
-                                    <Row>
-                                        <p className="font-size-14">Watering: {items.Watering} </p>
-                                    </Row>
-                                    <Row>
-                                        <p className="font-size-14">Sunlight: {items.Sun} </p>
-                                    </Row>
-                                    <Row>
-                                        <p className="font-size-14">Soil: {items.Soil} </p>
-                                    </Row>
-                                    <Row>
-                                        <p className="font-size-14">Timing: {items.WhenToPlant} </p>
-                                    </Row>
-                                    <Row>
-                                        <p className="font-size-14">Feeding: {items.Feeding} </p>
-                                    </Row>
-                                    <Row>
-                                        <p className="font-size-14">Transplanting: {items.Transplanting} </p>
-                                    </Row>
-                                    <Row>
-                                        <p className="font-size-14">Spacing: {items.Spacing} </p>
-                                    </Row>
-                                    <Row>
-                                        <p className="font-size-14">Harvesting: {items.Harvesting} </p>
-                                    </Row>
-                                </Container>
-                            </Col>
-                            <Col lg={5}>
-                                <img src={items.ImageLink2} alt="pic of plant" className="img-100" />
-                                
-                            </Col>
-                        </Row>
-                    </Container>
-                </div>
+                              </Col>
+                          </Row>
+                          <Row>
+                              <p className="darkgreen-text">{items.CO2PerUnit} g CO2e saved per tomato | Gardening Difficulty: {items.Difficulty} | Zones: {items.ZoneStart} - {items.ZoneEnd} | Height: {items.Height}</p>
+                          </Row>
+                      </Container>
+
+                      <Container>
+                          <Row>
+                              <Col lg={7}>
+                                  <p className="font-size-14">{items.Descr}</p>
+                                  {/* <p>Height: {items.Height}</p> */}
+                                  <h3>Plant Care</h3>
+                                  <hr className="line"></hr>
+                                  <Container>
+                                      <Row>
+                                          <p className="font-size-14">Watering: {items.Watering} </p>
+                                      </Row>
+                                      <Row>
+                                          <p className="font-size-14">Sunlight: {items.Sun} </p>
+                                      </Row>
+                                      <Row>
+                                          <p className="font-size-14">Soil: {items.Soil} </p>
+                                      </Row>
+                                      <Row>
+                                          <p className="font-size-14">Timing: {items.WhenToPlant} </p>
+                                      </Row>
+                                      <Row>
+                                          <p className="font-size-14">Feeding: {items.Feeding} </p>
+                                      </Row>
+                                      <Row>
+                                          <p className="font-size-14">Transplanting: {items.Transplanting} </p>
+                                      </Row>
+                                      <Row>
+                                          <p className="font-size-14">Spacing: {items.Spacing} </p>
+                                      </Row>
+                                      <Row>
+                                          <p className="font-size-14">Harvesting: {items.Harvesting} </p>
+                                      </Row>
+                                  </Container>
+                              </Col>
+                              <Col lg={5}>
+                                  <img src={items.ImageLink2} alt="pic of plant" className="img-100" />
+
+                              </Col>
+                          </Row>
+                      </Container>
+                  </div>
+                </section>
             )
         }
     }

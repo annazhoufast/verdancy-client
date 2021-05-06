@@ -15,14 +15,14 @@ code {
 h1 {
   font-size: 64pt;
   font-weight: bold;
-  padding-top: 64px;
+  padding-top: 4rem;
 }
 
 h2 {
   font-size: 40pt;
   font-weight: bold;
-  padding-top: 64px;
-  padding-bottom: 24px;
+  padding-top: 4rem;
+  padding-bottom: 1.5rem;
 }
 
 h3 {
@@ -31,12 +31,12 @@ h3 {
 }
 
 section {
-  padding-top: 64px;
-  padding-bottom: 112px;
+  padding-top: 4rem;
+  padding-bottom: 7rem;
 }
 
 .page-content {
-  padding-top: 64px;
+  padding-top: 4rem;
 }
 
 .container {
@@ -51,12 +51,12 @@ section {
   text-decoration: none;
 }
 
-.green-background, .green-button, .green-button:hover, .green-button:active, .green-button:focus {
+.green-background, .green-button, .green-button:hover, .green-button:active, .green-button:focus, .green-nav-button, .green-nav-button:hover, .green-nav-button:active, .green-nav-button:focus {
   color: #ffffff;
   background-color: #679967;
 }
 
-.darkgreen-background {
+.darkgreen-background, .green-button:hover {
   color: #ffffff;
   background-color: #194B19;
 }
@@ -70,7 +70,7 @@ section {
   color: #194B19;
 }
 
-.white-text, .darkgreen-background .link, .green-button .nav-button {
+.white-text, .darkgreen-background .link, .green-nav-button .nav-button {
   color: #ffffff;
 }
 
@@ -82,12 +82,12 @@ section {
   color: #679967;
 }
 
-.btn, .btn:active {
-  border: none;
+.nav-button:hover {
+  font-weight: bold;
 }
 
-.btn:hover {
-  font-weight: bold;
+.btn, .btn:active, .green-button, .nav-button, .green-nav-button {
+  border: none;
 }
 
 .centered {
@@ -104,17 +104,17 @@ section {
 /* navbar and footer*/
 
 #nav-bar {
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 #footer {
-  padding-top: 48px;
-  padding-bottom: 48px;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 #nav-links .link, #nav-links .btn {
-  margin-left: 48px;
+  margin-left: 3rem;
 }
 
 /* still not centered ugh */
@@ -125,7 +125,7 @@ section {
 
 #footer img {
   width: 25%;
-  padding-top: 48px;
+  padding-top: 3rem;
 }
 
 /* home page */
@@ -195,15 +195,16 @@ section {
 
 .searchbar {
     padding-bottom: 1rem;
-}
-
-.search {
-    padding-left: 5rem;
-    padding-right: 5rem;
+    padding-top: 4rem;
 }
 
 .card {
     height: 28rem;
+}
+
+#results {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
 }
 
 /* specific plant */
@@ -225,19 +226,6 @@ section {
     padding-left: 0px;
 }
 
-.green-btn{
-    color: #ffffff;
-  background-color:  #194B19;
-}
-
-.pad-top {
-    padding-top: 5rem;
-}
-
-.plant-name {
-    font-size: 48pt;
-}
-
 .font-size-14 {
     font-size: 14pt;
 }
@@ -247,6 +235,11 @@ section {
 }
 
 /* garden */
+
+#garden {
+  padding-top: 4rem;
+}
+
  .harvest-card .card{
     min-height: 20rem;
     height: 20rem;
@@ -308,6 +301,7 @@ section {
 /* hacky way to center */
 
 #advice {
+  padding-top: 2rem;
   padding-bottom: 0;
 }
 
@@ -321,7 +315,7 @@ section {
 
 #emissions-num {
   padding: 0;
-  padding-top: 96px;
+  padding-top: 6rem;
 }
 
 #emissions-img {
@@ -345,7 +339,7 @@ section {
 .conversion-num {
   font-size: 34pt;
   font-weight: bold;
-  padding-top: 24px;
+  padding-top: 1.5rem;
 }
 
 /* sign in */
@@ -355,11 +349,11 @@ section {
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-  }
+}
 
 /* please sign in to view this page */
 #please-sign-in img {
-  padding-top: 48px;
+  padding-top: 3rem;
   width: 15%;
 }
 

@@ -6,20 +6,22 @@ import {Link} from 'react-router-dom';
 export class Garden extends React.Component {
     render() {
         return (
-            <div className="search">
+          <section>
+            <div className="container">
                 <Row>
                     <Col>
-                        <h1>my garden</h1>
+                        <h2>my garden</h2>
                     </Col>
                     <Col className="add-more">
                         <Link to="/search">
-                            <Button className="green-btn add-button" size="lg">+ add more plants</Button>
+                            <Button className="green-button add-button" size="lg">+ add more plants</Button>
                         </Link>
                     </Col>
                 </Row>
-                <p>Be sure to log your harvest activity when you're ready to eat your produce!</p>
+                <span>Be sure to log your harvest activity when you're ready to eat your produce!</span>
                 <PlantGroup stuff={this.props.plants} />
             </div>
+          </section>
         )
     }
 }

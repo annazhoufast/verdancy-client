@@ -38,14 +38,16 @@ export class ResultGroup extends React.Component {
             )
         } else {
             return (
-            <div>
-                <Row className="db-row">
-                    {this.state.plants.map(item => (
-                        <Result pName={item.PlantName} pSName={item.PlantScientificName}
-                            difficulty={item.Difficulty} image={item.ImageLink} id={item.PlantID} />
-                    ))}
-                </Row>
-            </div>
+                <div className="container">
+                  <div id="results">
+                      <Row className="db-row">
+                          {this.state.plants.map(item => (
+                              <Result pName={item.PlantName} pSName={item.PlantScientificName}
+                                  difficulty={item.Difficulty} image={item.ImageLink} id={item.PlantID} />
+                          ))}
+                      </Row>
+                  </div>
+                </div>
             )
                     }
     }

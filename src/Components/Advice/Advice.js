@@ -8,7 +8,7 @@ export class Advice extends React.Component {
             <div className="container">
                 <h2>new to gardening?</h2>
                 <p>We've got you covered with some beginner's gardening tips.</p>
-                <p>Hover over an advice card to learn more!</p>
+                <span>Hover over an advice card to learn more!</span>
                 <AdviceCardGroup/>
             </div>
           </section>

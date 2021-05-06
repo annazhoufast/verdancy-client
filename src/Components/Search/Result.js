@@ -43,7 +43,9 @@ export class Result extends React.Component {
             <Col md={4} xs={12} className="db-plant">
                 <Card className="card">
                     <div>
-                        <Card.Img variant="top" src={this.props.image} className="full-img" />
+                        <Link to={linkToPlant}>
+                            <Card.Img variant="top" src={this.props.image} className="full-img" />
+                        </Link>
                         {/* COME BACK AND DEAL W/ THIS */}
                         {this.state.auth !== null ? <Button variant="outline-success" onClick={addToGarden}>+</Button>: <div/>}
                         <Button variant="success">

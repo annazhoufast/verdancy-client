@@ -4,7 +4,6 @@ import {Row, Container} from "react-bootstrap";
 export class EmissionsTitle extends React.Component {
 
     render() {
-        console.log(this.props.totalEm);
         return (
           <section className="green-background">
             <div className="container">

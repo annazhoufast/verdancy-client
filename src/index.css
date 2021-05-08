@@ -131,7 +131,7 @@ section {
 /* home page */
 
 #home-background {
-  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("https://raw.githubusercontent.com/annazhoufast/plantastic/main/client/src/imgs/home/cover.png?token=AKMRZNUTPHM4QZJOHM27RNDASTARW");
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("https://raw.githubusercontent.com/annazhoufast/verdancy-client/main/src/imgs/home/cover.png?token=AKMRZNT5NVBYPFLKOIA2JUDAT37Y6");
   background-position: center;
   background-size: cover;
   color: #ffffff;

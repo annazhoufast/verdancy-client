@@ -33,19 +33,19 @@ export class Conversions extends React.Component {
                   <h3 className="centered emissions-header">Let’s break this down! Saving {emissions} g CO2e is the same as saving...</h3>
                   <Row>
                       <div className="conversion centered">
-                          <img src="https://raw.githubusercontent.com/annazhoufast/plantastic/main/client/src/imgs/emissions/car.png?token=AKMRZNWKOADR3IREWMNCC6TASTFLK"
+                          <img src="https://raw.githubusercontent.com/annazhoufast/verdancy-client/main/src/imgs/emissions/car.png?token=AKMRZNXOPVFGSU5YMOZHRMTAT3752"
                           alt="car icon" className="individ-step"/>
                           <p className="conversion-num">{miles} miles</p>
                           <p>driven by a car</p>
                       </div>
                       <div className="conversion centered">
-                          <img src="https://raw.githubusercontent.com/annazhoufast/plantastic/main/client/src/imgs/emissions/plastic.png?token=AKMRZNSZ4NFFMHK3VTYPO6LASTFRQ"
+                          <img src="https://raw.githubusercontent.com/annazhoufast/verdancy-client/main/src/imgs/emissions/plastic.png?token=AKMRZNTSZFZMDKOCGZ5YJCTAT4AEA"
                           alt="plastic icon" className="individ-step"/>
                           <p className="conversion-num">{plastic} lbs</p>
                           <p>of plastic</p>
                       </div>
                       <div className="conversion centered">
-                          <img src="https://raw.githubusercontent.com/annazhoufast/plantastic/main/client/src/imgs/emissions/water.png?token=AKMRZNRF54GF2ALQRH735I3ASTFSI"
+                          <img src="https://raw.githubusercontent.com/annazhoufast/verdancy-client/main/src/imgs/emissions/water.png?token=AKMRZNW6KS64XKJVDZQN4ELAT4AHM"
                           alt="water icon" className="individ-step"/>
                           <p className="conversion-num">{water} gal</p>
                           <p>of water</p>

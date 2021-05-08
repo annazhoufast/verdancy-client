@@ -3,6 +3,11 @@ import {Row, Container} from "react-bootstrap";
 import {Team} from './Team';
 
 export class LandingPage extends React.Component {
+
+    componentDidMount() {
+      window.scrollTo(0, 0)
+    }
+    
     render() {
       return (
           <body>
@@ -21,7 +26,7 @@ export class LandingPage extends React.Component {
                         <p>
                             This web app aims to bridge the information gap that beginners experience in learning more about growing their own food. They are able
                             to gain personalized information regarding the amount of carbon emissions that they save when growing their vegetables and can track
-                            their environmental impact in real time. 
+                            their environmental impact in real time.
                         </p>
                     </div>
                   </div>

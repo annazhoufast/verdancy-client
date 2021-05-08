@@ -145,7 +145,7 @@ class App extends Component {
       return (
         <Router basename={process.env.PUBLIC_URL} >
 
-            <Navbar className="darkgreen-background">
+            <Navbar className="darkgreen-background sticky-top">
                 <div className="container" id="nav-bar">
                     <Link className="link" to="/">verdancy</Link>
                     <div id="nav-links">

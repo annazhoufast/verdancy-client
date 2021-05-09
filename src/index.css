@@ -5,15 +5,16 @@ body {
   font-size: 16pt;
   color: #373A3C;
   background-color: #ffffff;
+  zoom: 80%;
+}
+
+#homepage, #emissions-page, #landing-page {
+  zoom: 100%;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
   monospace;
-}
-
-#id-spacer {
-  height: 6.25rem;
 }
 
 h1 {
@@ -35,12 +36,8 @@ h3 {
 }
 
 section {
-  padding-top: 4rem;
+  padding-top: 3rem;
   padding-bottom: 7rem;
-}
-
-.page-content {
-  padding-top: 4rem;
 }
 
 .container {
@@ -83,7 +80,7 @@ section {
   color: #ffffff;
 }
 
-.black-text, .cream-button .nav-button, #home-background .link {
+.black-text, .cream-button .nav-button, #title-card .link {
   color: #373A3C;
 }
 
@@ -95,15 +92,23 @@ section {
   border: none;
 }
 
+/* hacky way to center images when doing a side-by-side */
+.left-stuff {
+  margin-right: 15%;
+}
+
 .centered {
   display: inline-block;
   width: auto;
   text-align: center;
 }
 
-/* hacky way to center images when doing a side-by-side */
-.left-stuff {
-  margin-right: 15%;
+.hidden {
+  display: none;
+}
+
+.display-on {
+  display: block;
 }
 
 /* navbar and footer*/
@@ -122,7 +127,6 @@ section {
   margin-left: 3rem;
 }
 
-/* still not centered ugh */
 #footer-links {
   width: 100%;
   margin: auto;
@@ -135,7 +139,7 @@ section {
 
 /* home page */
 
-#home-background {
+#title-card {
   background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("https://raw.githubusercontent.com/annazhoufast/verdancy-client/main/src/imgs/home/cover.png?token=AKMRZNT5NVBYPFLKOIA2JUDAT37Y6");
   background-position: center;
   background-size: cover;
@@ -168,11 +172,11 @@ section {
   margin: auto;
 }
 
-#team-img {
-  width: 80%;
-}
-
 /* database */
+
+#search-bar {
+  padding-bottom: 0;
+}
 
 .full-img {
     width: 100%;
@@ -192,11 +196,6 @@ section {
     /* padding-bottom: 2rem; */
 }
 
-.searchbar {
-    padding-bottom: 1rem;
-    padding-top: 4rem;
-}
-
 .card {
     height: 28rem;
 }
@@ -206,7 +205,7 @@ section {
   padding-bottom: 4rem;
 }
 
-/* specific plant */
+/* specific plant page */
 
 .img-100 {
     width: 100%;
@@ -233,7 +232,7 @@ section {
     font-size: 16pt;
 }
 
-/* garden */
+/* my garden */
 
 #garden {
   padding-top: 4rem;
@@ -314,12 +313,22 @@ section {
   padding-top: 6rem;
 }
 
-#emissions-img {
-  width: 30%;
+.h2size-text {
+  font-size: 40pt;
 }
 
-.medium-text {
-  font-size: 34pt;
+#emissions-img {
+  width: 25%;
+  height: 75%;
+  padding-top: 3rem;
+}
+
+.co2e-info {
+  margin-top: 2rem
+}
+
+.co2e-info div {
+  width: 60%;
 }
 
 .emissions-header {
@@ -394,4 +403,10 @@ section {
 #submit {
   margin-top: 3rem;
   width: 75%;
+}
+
+/* landing page */
+
+#team-img {
+  width: 80%;
 }

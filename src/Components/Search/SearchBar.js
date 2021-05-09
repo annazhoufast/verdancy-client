@@ -10,8 +10,9 @@ export class SearchBar extends React.Component {
                     this.setState({ query, loading: true, message: ''  } );
         };
         return(
+            <section id="search-bar">
                 <div className="container">
-                    <div className="searchbar">
+                    <div>
                         <h2>search our plant database</h2>
                         <InputGroup className="mb-3" onChange={this.handleOnInputChange}>
                             <FormControl
@@ -50,7 +51,7 @@ export class SearchBar extends React.Component {
                         </Container>
                     </div>
                 </div>
-
+            </section>
         )
     }
 }

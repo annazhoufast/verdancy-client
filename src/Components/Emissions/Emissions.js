@@ -32,7 +32,7 @@ export class Emissions extends React.Component {
 
         // console.log(garden);
 
-        
+
         // fetch("https://verdancy.capstone.ischool.uw.edu/v1/emissions/", {
         //     method: 'GET',
         //     headers: new Headers({
@@ -58,7 +58,7 @@ export class Emissions extends React.Component {
 
     render() {
         return (
-            <body>
+            <body id="emissions-page">
 
               <EmissionsTitle emissions={this.state.totalEm} />
               <Conversions emissions={this.state.totalEm} />

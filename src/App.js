@@ -154,10 +154,10 @@ class App extends Component {
                         <Link className="link" to="/emissions">my emissions</Link>
                         <Link className="link" to="/garden">my garden</Link>
                         <Button className="green-nav-button">
-                            <Link to="/signup" className="nav-button">Get Started</Link>
+                            <Link to="/signup" className="nav-button">get started</Link>
                         </Button>
                         <Button className="cream-button">
-                            <Link to="/signin" className="nav-button">Sign In</Link>
+                            <Link to="/signin" className="nav-button">sign in</Link>
                         </Button>
                     </div>
                 </div>

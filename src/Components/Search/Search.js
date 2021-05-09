@@ -6,7 +6,7 @@ import {SearchBar} from './SearchBar';
 export class Search extends React.Component {
     render() {
         return (
-            <div className="search">
+            <div>
                 <SearchBar/>
                 <ResultGroup plants={this.props.stuff} />
             </div>

@@ -6,7 +6,7 @@ import {Steps} from './Steps';
 export class Home extends React.Component {
     render() {
         return (
-            <body>
+            <body id="homepage">
 
               <TitleCard />
               <Background />

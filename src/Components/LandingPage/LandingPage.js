@@ -7,10 +7,10 @@ export class LandingPage extends React.Component {
     componentDidMount() {
       window.scrollTo(0, 0)
     }
-    
+
     render() {
       return (
-          <body>
+          <body id="landing-page">
               <section className="green-background">
                   <div className="container">
                     <div>

@@ -11,7 +11,7 @@ import {Row, Container} from "react-bootstrap";
 export class TitleCard extends React.Component {
     render() {
       return (
-          <section id="home-background">
+          <section id="title-card">
             <div className="container">
               <Row>
                 <div>
@@ -21,7 +21,7 @@ export class TitleCard extends React.Component {
                     <h2>1. <span className="green-text"><b>green</b></span> with vegetation</h2>
                   </div>
                   <br />
-                  <div id="title-desc">
+                  <div>
                     <p>Go <span className="green-text"><b>green</b></span> with us. Reduce your
                     carbon footprint with home gardening!</p>
                   </div>

@@ -4,7 +4,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import PropTypes from 'prop-types';
 import {withRouter, useLocation} from 'react-router-dom';
 import { createBrowserHistory } from 'history';
-import 'font-awesome/css/font-awesome.min.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTint, faSun, faSpa, faClock, faHandHoldingHeart, faDolly, faRuler, faSeedling } from '@fortawesome/free-solid-svg-icons'
 
 export class SinglePlant extends React.Component {
     constructor(props) {
@@ -84,7 +85,7 @@ export class SinglePlant extends React.Component {
                               </Col>
                           </Row>
                           <Row>
-                              <p className="darkgreen-text"><b>{items.CO2PerUnit} g CO2e</b> saved per tomato | <b>Gardening Difficulty:</b> {items.Difficulty} | <b>Zones:</b> {items.ZoneStart} - {items.ZoneEnd} | <b>Height:</b> {items.Height}</p>
+                              <p className="darkgreen-text"><b>{items.CO2PerUnit} g CO2e</b> saved per tomato | <b>Gardening Difficulty:</b> {items.Difficulty} | <b>Zones:</b> {items.ZoneStart} - {items.ZoneEnd} | <b>Height:</b> {items.Height} inches</p>
                           </Row>
                       </Container>
 
@@ -95,30 +96,30 @@ export class SinglePlant extends React.Component {
                                   {/* <p>Height: {items.Height}</p> */}
                                   <h3>Vegetable Care</h3>
                                   <hr className="line"></hr>
-                                  <Container >
+                                  <Container>
                                       <Row>
-                                          <p className="font-size-14"><b>Watering:</b> {items.Watering} </p>
+                                          <p className="font-size-14"><FontAwesomeIcon icon={faTint} className="care-icon" /><b> Watering:</b> {items.Watering} </p>
                                       </Row>
                                       <Row>
-                                          <p className="font-size-14"><b>Sunlight:</b> {items.Sun} </p>
+                                          <p className="font-size-14"><FontAwesomeIcon icon={faSun} className="care-icon" /><b>Sunlight:</b> {items.Sun} </p>
                                       </Row>
                                       <Row>
-                                          <p className="font-size-14"><b>Soil:</b> {items.Soil} </p>
+                                          <p className="font-size-14"><FontAwesomeIcon icon={faSpa} className="care-icon" /><b>Soil:</b> {items.Soil} </p>
                                       </Row>
                                       <Row>
-                                          <p className="font-size-14"><b>Timing:</b> {items.WhenToPlant} </p>
+                                          <p className="font-size-14"><FontAwesomeIcon icon={faClock} className="care-icon" /><b>Timing:</b> {items.WhenToPlant} </p>
                                       </Row>
                                       <Row>
-                                          <p className="font-size-14"><b>Feeding:</b> {items.Feeding} </p>
+                                          <p className="font-size-14"><FontAwesomeIcon icon={faHandHoldingHeart} className="care-icon" /><b>Feeding:</b> {items.Feeding} </p>
                                       </Row>
                                       <Row>
-                                          <p className="font-size-14"><b>Transplanting:</b> {items.Transplanting} </p>
+                                          <p className="font-size-14"><FontAwesomeIcon icon={faDolly} className="care-icon" /><b>Transplanting:</b> {items.Transplanting} </p>
                                       </Row>
                                       <Row>
-                                          <p className="font-size-14"><b>Spacing:</b> {items.Spacing} </p>
+                                          <p className="font-size-14"><FontAwesomeIcon icon={faRuler} className="care-icon" /><b>Spacing:</b> {items.Spacing} </p>
                                       </Row>
                                       <Row>
-                                          <p className="font-size-14"><b>Harvesting:</b> {items.Harvesting} </p>
+                                          <p className="font-size-14"><FontAwesomeIcon icon={faSeedling} className="care-icon" /><b>Harvesting:</b> {items.Harvesting} </p>
                                       </Row>
                                   </Container>
                               </Col>

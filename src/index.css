@@ -239,18 +239,13 @@ section {
     font-size: 16pt;
 }
 
-/*
-#plant-info .font-size-14 {
-  margin-left: 1rem;
+.care-icon {
+  margin-top: 1rem;
+  margin-right: 1rem;
 }
-*/
 
 #plant-info, #plant-info h3 {
   padding-top: 2rem;
-}
-
-#plant-info hr {
-  padding-bottom: 2rem;
 }
 
 #plant-img {

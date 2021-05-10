@@ -4,7 +4,8 @@ import {
     HashRouter as Router,
     Switch,
     Route,
-    Link
+    Link,
+    Redirect
 } from 'react-router-dom';
 import {Navbar, Nav, Button} from 'react-bootstrap';
 import {Home} from './Components/HomePage/Home';
@@ -153,12 +154,17 @@ class App extends Component {
                         <Link className="link" to="/search">search</Link>
                         <Link className="link" to="/emissions">my emissions</Link>
                         <Link className="link" to="/garden">my garden</Link>
-                        <Button className="green-nav-button">
-                            <Link to="/signup" className="nav-button">get started</Link>
-                        </Button>
+                        {user ? <SignOutButton setUser={this.setUser} setAuthToken={this.setAuthToken} />
+                            :
+                            <Button className="green-nav-button">
+                                <Link to="/signup" className="nav-button">get started</Link>
+                            </Button>
+                        }
+                        {user ? <div />
+                        :
                         <Button className="cream-button">
                             <Link to="/signin" className="nav-button">sign in</Link>
-                        </Button>
+                        </Button>}
                     </div>
                 </div>
             </Navbar>
@@ -181,18 +187,14 @@ class App extends Component {
                     <Search stuff={this.state.plants} />
                 </Route>
                 <Route exact path="/signin">
-                    {user ? <SignOutButton setUser={this.setUser} setAuthToken={this.setAuthToken} />
-                        :
-                        <SignIn setPage={this.setPage} setAuthToken={this.setAuthToken} setUser={this.setUser} />
-
-                    }
+                    {user ? <Redirect to="/" /> :
+                        <SignIn setPage={this.setPage} setAuthToken={this.setAuthToken} setUser={this.setUser} />}
                 </Route>
                 <Route exact path="/signup">
-                    {user ? <SignOutButton setUser={this.setUser} setAuthToken={this.setAuthToken} />
-                        :
-                        <SignUp setPage={this.setPage} setAuthToken={this.setAuthToken} setUser={this.setUser} />
-                    }
+                    {user ? <Redirect to="/emissions" /> :
+                        <SignUp setPage={this.setPage} setAuthToken={this.setAuthToken} setUser={this.setUser} />}
                 </Route>
+                
                 {/* this is terrible code im sorry but i cant think of anything else */}
                 {this.state.singlePlants}
             </Switch>

@@ -1,9 +1,19 @@
 import React, {Component} from 'react';
 import {InputGroup, FormControl, Button, Container, Row, Col} from 'react-bootstrap';
 import axios from 'axios';
+import { faLessThanEqual } from '@fortawesome/free-solid-svg-icons';
 
 
 export class SearchBar extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            query: false,
+            loading: false,
+            message: ''
+        }
+    }
+
     render() {
         const handleOnInputChange = (event) => {
             const query = event.target.value;

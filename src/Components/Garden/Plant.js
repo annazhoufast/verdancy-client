@@ -2,6 +2,8 @@ import React, {Component, useState} from 'react';
 import {Card, Button, Row, Col, Modal, Form, Container} from 'react-bootstrap';
 import "bootstrap/dist/css/bootstrap.min.css";
 import NumericInput from 'react-numeric-input';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faTimes} from '@fortawesome/free-solid-svg-icons';
 
 
 // export class Plant extends React.Component {
@@ -24,6 +26,10 @@ class Plant extends Component {
         }
     }
     updateQ = quant => this.setState({ quant: quant });
+
+    deletePlant = async (e) => {
+        
+    }
     
     updatePlantQuantity = async (e) => {
         e.preventDefault();
@@ -76,20 +82,27 @@ class Plant extends Component {
             <Container className="outline">
                 <Row>
                     <Col lg={5}>
-                        <img src="https://raw.githubusercontent.com/annazhoufast/plantastic/main/data/imgs/tomatoe.png?token=ALLXA25BKVLL7A7AEQS3W3LASHPF6"
+                        <img src="https://raw.githubusercontent.com/annazhoufast/plantastic/main/data/imgs/tomatoe.png?token=ALLXA23MPOVXSKYWA7DGQXTAULINM"
                             alt="drawing of plant" className="garden-img" />
                     </Col>
                     <Col lg={7} className="harvest">
-                        <h4>
-                            <b>{this.props.pName}</b>
-                        </h4>
+                        <Row>
+                            <Col>
+                                <h4>
+                                    <b>{this.props.pName}</b>
+                                </h4>
+                            </Col>
+                            <Col>
+                                <FontAwesomeIcon icon={faTimes} />
+                            </Col>
+                        </Row>
                         <p>Harvest Total</p>
                         {/* <p>{this.props.quantity}</p> */}
                         <p>{this.state.total}</p>
                         <p>Carbon Emissions Saved</p>
                         {/* <p>{this.props.totCarbon} g</p> */}
                         <p>{this.state.totalCO2} g CO2</p>
-                        <Button onClick={() => this.setState({lgShow: true})} block className="green-btn">Harvest!</Button>
+                        <Button onClick={() => this.setState({lgShow: true})} block className="darkgreen-background">Harvest!</Button>
                         <Modal
                             size="lg"
                             show={this.state.lgShow}
@@ -119,7 +132,7 @@ class Plant extends Component {
                                             </div>
                                         ))}
                                     </Form>
-                                    <Button className="green-btn" size="lg" onClick={(e) => this.updatePlantQuantity(e)}>Confirm</Button>
+                                    <Button className="darkgreen-background" size="lg" onClick={(e) => this.updatePlantQuantity(e)}>Confirm</Button>
                                 </Container>
                             </Modal.Body>
                         </Modal>

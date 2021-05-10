@@ -26,7 +26,7 @@ export class TitleCard extends React.Component {
                     carbon footprint with home gardening!</p>
                   </div>
                   <br />
-                  <Button className="cream-button">
+                  <Button className="cream-button" size="lg">
                     <Link to="/search" className="link">Search our vegetables</Link>
                   </Button>
                 </div>

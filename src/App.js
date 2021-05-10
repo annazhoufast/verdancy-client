@@ -204,7 +204,7 @@ class App extends Component {
                     <Link className="link" to="/landing">Learn more about our team and our project!</Link>
                   </div>
                   <div>
-                    <img src="https://raw.githubusercontent.com/annazhoufast/verdancy-client/main/src/imgs/landing/ischool.png?token=AKMRZNWG2D6W6FHVVNTEUWDATCKZE"
+                    <img src="https://raw.githubusercontent.com/annazhoufast/verdancy-client/main/src/imgs/landing/ischool.png?token=AKMRZNTVQB6HRGYOSV46SL3AUIJD6"
                     alt="iSchool logo"/>
                   </div>
                 </div>

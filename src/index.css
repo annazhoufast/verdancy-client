@@ -48,13 +48,9 @@ section {
   margin: 0;
 }
 
-.link:hover, .nav-button:hover {
-  text-decoration: none;
-}
-
 .green-background, .green-button, .green-button:hover, .green-button:active, .green-button:focus, .green-nav-button, .green-nav-button:hover, .green-nav-button:active, .green-nav-button:focus {
   color: #ffffff;
-  background-color: #679967;
+  background-color: #679967 !important;
 }
 
 .darkgreen-background {
@@ -64,7 +60,7 @@ section {
 
 .cream-background, .cream-button, .cream-button:hover, .cream-button:active, .cream-button:focus {
   color: #373A3C;
-  background-color: #F4EBC2;
+  background-color: #F4EBC2 !important;
 }
 
 .white-background {
@@ -88,8 +84,13 @@ section {
   color: #679967;
 }
 
-.btn, .btn:active, .green-button, .nav-button, .green-nav-button {
+.link:hover, .nav-button:hover {
+  text-decoration: none;
+}
+
+.btn {
   border: none;
+  outline: 0;
 }
 
 /* hacky way to center images when doing a side-by-side */
@@ -125,6 +126,10 @@ section {
 
 #nav-links .link, #nav-links .btn {
   margin-left: 3rem;
+}
+
+.nav-button {
+  font-size: 15pt;
 }
 
 #footer-links {
@@ -207,10 +212,6 @@ section {
 
 /* specific plant page */
 
-.img-100 {
-    width: 100%;
-}
-
 .line {
     border-top: 1px solid black;
 }
@@ -218,6 +219,12 @@ section {
 .add-button {
     float: right;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* this is very hacky but im too lazy to figure out how to center things */
+.add-more {
+    padding-top: 2.5rem;
+    padding-right: 0;
 }
 
 .col, .col-lg-7 {
@@ -230,6 +237,25 @@ section {
 
 .font-size-16 {
     font-size: 16pt;
+}
+
+/*
+#plant-info .font-size-14 {
+  margin-left: 1rem;
+}
+*/
+
+#plant-info, #plant-info h3 {
+  padding-top: 2rem;
+}
+
+#plant-info hr {
+  padding-bottom: 2rem;
+}
+
+#plant-img {
+  width: 75%;
+  margin-left: 18%;
 }
 
 /* my garden */
@@ -275,11 +301,6 @@ section {
     padding-bottom: 1rem;
     padding-left: 15px;
     padding-right: 30px;
-}
-
-/* this is very hacky but im too lazy to figure out how to center things */
-.add-more {
-    padding-top: 2.5rem;
 }
 
 /* advice */
@@ -357,6 +378,10 @@ section {
 #please-sign-in div {
   margin: auto;
   width: 100%;
+}
+
+#please-sign-in .link:hover {
+  color: #194B19;
 }
 
 /* getting started and sign in */

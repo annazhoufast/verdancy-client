@@ -26,7 +26,7 @@ export class EmissionsTitle extends React.Component {
                 alt="woman holding up a globe" id="emissions-img"/>
               </Row>
               <div className="co2e-info">
-                  <Button className={`cream-button ${ this.state.toggleButton}`} onClick={this.showDisplay.bind(this)}>
+                  <Button className={`cream-button ${ this.state.toggleButton}`} size="lg" onClick={this.showDisplay.bind(this)}>
                       <span>What is CO2e?</span>
                   </Button>
                   <div className={`${ this.state.toggleDisplay}`}>
@@ -37,7 +37,7 @@ export class EmissionsTitle extends React.Component {
                           “Carbon dioxide equivalent” or “CO2e” is a term for describing different greenhouse gases in a common unit. For any quantity and type of greenhouse gas, CO2e signifies the amount
                           of CO2 which would have the equivalent global warming impact.
                       </p>
-                      <Button className="cream-button co2e-info" onClick={this.hideDisplay.bind(this)}>
+                      <Button className="cream-button co2e-info" size="lg" onClick={this.hideDisplay.bind(this)}>
                           <span>OK, got it!</span>
                       </Button>
                   </div>

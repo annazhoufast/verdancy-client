@@ -4,10 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import PropTypes from 'prop-types';
 import {withRouter, useLocation} from 'react-router-dom';
 import { createBrowserHistory } from 'history';
-
-
-
-
+import 'font-awesome/css/font-awesome.min.css';
 
 export class SinglePlant extends React.Component {
     constructor(props) {
@@ -77,7 +74,7 @@ export class SinglePlant extends React.Component {
                               <Col>
                                   <h2>{items.PlantName}</h2>
                               </Col>
-                              <Col className="add">
+                              <Col className="add-more">
                                   {this.state.auth ?
                                       <Button variant="primary" size="lg" className="add-button green-button" onClick={this.addToGarden}>+ add to garden</Button>
                                           :
@@ -87,46 +84,46 @@ export class SinglePlant extends React.Component {
                               </Col>
                           </Row>
                           <Row>
-                              <p className="darkgreen-text">{items.CO2PerUnit} g CO2e saved per tomato | Gardening Difficulty: {items.Difficulty} | Zones: {items.ZoneStart} - {items.ZoneEnd} | Height: {items.Height}</p>
+                              <p className="darkgreen-text"><b>{items.CO2PerUnit} g CO2e</b> saved per tomato | <b>Gardening Difficulty:</b> {items.Difficulty} | <b>Zones:</b> {items.ZoneStart} - {items.ZoneEnd} | <b>Height:</b> {items.Height}</p>
                           </Row>
                       </Container>
 
-                      <Container>
+                      <Container id="plant-info">
                           <Row>
                               <Col lg={7}>
                                   <p className="font-size-14">{items.Descr}</p>
                                   {/* <p>Height: {items.Height}</p> */}
-                                  <h3>Plant Care</h3>
+                                  <h3>Vegetable Care</h3>
                                   <hr className="line"></hr>
-                                  <Container>
+                                  <Container >
                                       <Row>
-                                          <p className="font-size-14">Watering: {items.Watering} </p>
+                                          <p className="font-size-14"><b>Watering:</b> {items.Watering} </p>
                                       </Row>
                                       <Row>
-                                          <p className="font-size-14">Sunlight: {items.Sun} </p>
+                                          <p className="font-size-14"><b>Sunlight:</b> {items.Sun} </p>
                                       </Row>
                                       <Row>
-                                          <p className="font-size-14">Soil: {items.Soil} </p>
+                                          <p className="font-size-14"><b>Soil:</b> {items.Soil} </p>
                                       </Row>
                                       <Row>
-                                          <p className="font-size-14">Timing: {items.WhenToPlant} </p>
+                                          <p className="font-size-14"><b>Timing:</b> {items.WhenToPlant} </p>
                                       </Row>
                                       <Row>
-                                          <p className="font-size-14">Feeding: {items.Feeding} </p>
+                                          <p className="font-size-14"><b>Feeding:</b> {items.Feeding} </p>
                                       </Row>
                                       <Row>
-                                          <p className="font-size-14">Transplanting: {items.Transplanting} </p>
+                                          <p className="font-size-14"><b>Transplanting:</b> {items.Transplanting} </p>
                                       </Row>
                                       <Row>
-                                          <p className="font-size-14">Spacing: {items.Spacing} </p>
+                                          <p className="font-size-14"><b>Spacing:</b> {items.Spacing} </p>
                                       </Row>
                                       <Row>
-                                          <p className="font-size-14">Harvesting: {items.Harvesting} </p>
+                                          <p className="font-size-14"><b>Harvesting:</b> {items.Harvesting} </p>
                                       </Row>
                                   </Container>
                               </Col>
                               <Col lg={5}>
-                                  <img src={items.ImageLink2} alt="pic of plant" className="img-100" />
+                                  <img src={items.ImageLink2} alt="pic of plant" id="plant-img" />
 
                               </Col>
                           </Row>

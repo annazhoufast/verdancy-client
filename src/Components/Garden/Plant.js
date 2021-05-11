@@ -82,7 +82,9 @@ class Plant extends Component {
                 <Container className="outline">
                     <Row>
                         <Col lg={5}>
-                            <img src="https://raw.githubusercontent.com/annazhoufast/plantastic/main/data/imgs/tomatoe.png?token=ALLXA23MPOVXSKYWA7DGQXTAULINM"
+                            {/* <img src="https://raw.githubusercontent.com/annazhoufast/plantastic/main/data/imgs/tomatoe.png?token=ALLXA23MPOVXSKYWA7DGQXTAULINM"
+                                alt="drawing of plant" className="garden-img" /> */}
+                            <img src={this.props.img}
                                 alt="drawing of plant" className="garden-img" />
                         </Col>
                         <Col lg={7} className="harvest">

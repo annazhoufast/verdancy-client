@@ -27,7 +27,8 @@ export class TitleCard extends React.Component {
                       carbon footprint with home gardening!
                     </p>
                     <p id="mobile-message">
-                      On mobile? We highly recommend you use our web app on desktop, as some feature may not be available on mobile.
+                      On mobile or a smaller screen? We highly recommend you use our web app on desktop, as otherwise some features
+                      may not be available and some things may appear out of place.
                     </p>
                   </div>
                   <br />

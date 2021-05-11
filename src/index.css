@@ -476,6 +476,9 @@ section {
   .conversion-num {
     font-size: 24pt;
   }
+  #mobile-message {
+    display: block;
+  }
 }
 
 @media only screen and (max-width:991px) {
@@ -517,6 +520,9 @@ section {
   }
   #plant-img {
     margin-top: 3rem;
+  }
+  #mobile-message {
+    display: block;
   }
 }
 

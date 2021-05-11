@@ -47,10 +47,11 @@ export class Result extends React.Component {
                             <Card.Img variant="top" src={this.props.image} className="full-img" />
                         </Link>
                         {/* COME BACK AND DEAL W/ THIS */}
-                        {this.state.auth !== null ? <Button variant="outline-success" onClick={addToGarden}>+</Button>: <div/>}
-                        <Button variant="success">
+                        {this.state.inGarden ? <Button variant="success">
                             <FontAwesomeIcon icon={faCheck} />
                         </Button>
+                        : <Button variant="outline-success" onClick={addToGarden}>+</Button>}
+                        
                     </div>
                     <Card.Body>
                         <Card.Title>

@@ -28,7 +28,8 @@ export class PlantGroup extends React.Component {
                     this.setState({
                         isLoaded: true,
                         items: result
-                    });
+                    })
+                    // localStorage.setItem("ups", this.state.items);
                 },
                 (error) => {
                     this.setState({

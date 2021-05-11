@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import {withRouter, useLocation} from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTint, faSun, faSpa, faClock, faHandHoldingHeart, faDolly, faRuler, faSeedling } from '@fortawesome/free-solid-svg-icons'
+import { faTint, faSun, faSpa, faClock, faHandHoldingHeart, faDolly, faRuler, faSeedling, faCheck } from '@fortawesome/free-solid-svg-icons'
 
 export class SinglePlant extends React.Component {
     constructor(props) {
@@ -15,7 +15,8 @@ export class SinglePlant extends React.Component {
             isLoaded: false,
             items: {},
             auth: localStorage.getItem("Authorization"),
-            id: this.props.id
+            id: this.props.id,
+            inGarden: false
         };
 
     }
@@ -76,10 +77,12 @@ export class SinglePlant extends React.Component {
                                   <h2>{items.PlantName}</h2>
                               </Col>
                               <Col className="add-more">
-                                  {this.state.auth ?
-                                      <Button variant="primary" size="lg" className="add-button green-button" onClick={this.addToGarden}>+ add to garden</Button>
-                                          :
-                                      <div />
+                                  {this.state.inGarden ?
+                                    <Button variant="success" size="lg" className="add-button darkgreen-background">
+                                        <FontAwesomeIcon icon={faCheck} /> added to Garden
+                                    </Button>
+                                      :
+                                      <Button variant="success" size="lg" className="add-button darkgreen-background" onClick={this.addToGarden}>+ add to garden</Button>
                                   }
 
                               </Col>

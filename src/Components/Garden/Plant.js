@@ -5,14 +5,6 @@ import NumericInput from 'react-numeric-input';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faTimes} from '@fortawesome/free-solid-svg-icons';
 
-
-// export class Plant extends React.Component {
-
-// function updateQuant(quant) {
-//     this.setState({quant});
-// }
-
-// function Plant(props) {
 class Plant extends Component {
     constructor(props) {
         super(props);
@@ -22,13 +14,24 @@ class Plant extends Component {
             auth: localStorage.getItem("Authorization"),
             total: this.props.quantity,
             co2: this.props.co2,
-            totalCO2: this.props.totCarbon
+            totalCO2: this.props.totCarbon,
+            inGarden: true
         }
     }
     updateQ = quant => this.setState({ quant: quant });
 
     deletePlant = async (e) => {
-        
+        const response = await fetch("https://verdancy.capstone.ischool.uw.edu/v1/UserPlants/" + this.props.pID, {
+            method: "DELETE",
+            headers: new Headers({
+                "Authorization": this.state.auth
+            })
+        });
+        if (response.state > 201) {
+            console.log(response.text());
+            return;
+        }
+        this.setState({inGarden: false});
     }
     
     updatePlantQuantity = async (e) => {
@@ -71,76 +74,76 @@ class Plant extends Component {
         console.log(response);
     }
 
-    componentDidUpdate() {
-        // this.updatePlantQuantity()
-    }
-
     render() {
         console.log(this.state.quant)
-    return (
-        <Col lg={6} className="harvest-card">
-            <Container className="outline">
-                <Row>
-                    <Col lg={5}>
-                        <img src="https://raw.githubusercontent.com/annazhoufast/plantastic/main/data/imgs/tomatoe.png?token=ALLXA23MPOVXSKYWA7DGQXTAULINM"
-                            alt="drawing of plant" className="garden-img" />
-                    </Col>
-                    <Col lg={7} className="harvest">
-                        <Row>
-                            <Col>
-                                <h4>
-                                    <b>{this.props.pName}</b>
-                                </h4>
-                            </Col>
-                            <Col>
-                                <FontAwesomeIcon icon={faTimes} />
-                            </Col>
-                        </Row>
-                        <p>Harvest Total</p>
-                        {/* <p>{this.props.quantity}</p> */}
-                        <p>{this.state.total}</p>
-                        <p>Carbon Emissions Saved</p>
-                        {/* <p>{this.props.totCarbon} g</p> */}
-                        <p>{this.state.totalCO2} g CO2</p>
-                        <Button onClick={() => this.setState({lgShow: true})} block className="darkgreen-background">Harvest!</Button>
-                        <Modal
-                            size="lg"
-                            show={this.state.lgShow}
-                            onHide={() => this.setState({lgShow: false})}
-                            aria-labelledby="example-modal-sizes-title-lg"
-                        >
-                            <Modal.Header closeButton></Modal.Header>
-                            <Modal.Body>
-                                <Container>
-                                    <Row>
-                                        <Col>
-                                            <p>How much {this.props.pName} did you harvest?</p>
-                                        </Col>
-                                        <Col>
-                                            <NumericInput min={0} value={this.state.quant} onChange={this.updateQ} />
-                                            <p>{this.state.quant}</p>
-                                        </Col>
-                                    </Row>
-                                    <Form>
-                                        {['checkbox'].map((type) => (
-                                            <div key={`default-`} className="mb-3">
-                                                <Form.Check
-                                                    type={type}
-                                                    id={`default-`}
-                                                    label={`add to your emissions total?`}
-                                                />
-                                            </div>
-                                        ))}
-                                    </Form>
-                                    <Button className="darkgreen-background" size="lg" onClick={(e) => this.updatePlantQuantity(e)}>Confirm</Button>
-                                </Container>
-                            </Modal.Body>
-                        </Modal>
-                    </Col>
-                </Row>
-            </Container>
-        </Col>
-    )
+        if (this.state.inGarden) {
+        return (
+            <Col lg={6} className="harvest-card">
+                <Container className="outline">
+                    <Row>
+                        <Col lg={5}>
+                            <img src="https://raw.githubusercontent.com/annazhoufast/plantastic/main/data/imgs/tomatoe.png?token=ALLXA23MPOVXSKYWA7DGQXTAULINM"
+                                alt="drawing of plant" className="garden-img" />
+                        </Col>
+                        <Col lg={7} className="harvest">
+                            <Row>
+                                <Col>
+                                    <h4>
+                                        <b>{this.props.pName}</b>
+                                    </h4>
+                                </Col>
+                                <Col>
+                                    <FontAwesomeIcon icon={faTimes} onClick={(e) => this.deletePlant(e)} />
+                                </Col>
+                            </Row>
+                            <p>Harvest Total</p>
+                            {/* <p>{this.props.quantity}</p> */}
+                            <p>{this.state.total}</p>
+                            <p>Carbon Emissions Saved</p>
+                            {/* <p>{this.props.totCarbon} g</p> */}
+                            <p>{this.state.totalCO2} g CO2</p>
+                            <Button onClick={() => this.setState({lgShow: true})} block className="darkgreen-background">Harvest!</Button>
+                            <Modal
+                                size="lg"
+                                show={this.state.lgShow}
+                                onHide={() => this.setState({lgShow: false})}
+                                aria-labelledby="example-modal-sizes-title-lg"
+                            >
+                                <Modal.Header closeButton></Modal.Header>
+                                <Modal.Body>
+                                    <Container>
+                                        <Row>
+                                            <Col>
+                                                <p>How much {this.props.pName} did you harvest?</p>
+                                            </Col>
+                                            <Col>
+                                                <NumericInput min={0} value={this.state.quant} onChange={this.updateQ} />
+                                                <p>{this.state.quant}</p>
+                                            </Col>
+                                        </Row>
+                                        <Form>
+                                            {['checkbox'].map((type) => (
+                                                <div key={`default-`} className="mb-3">
+                                                    <Form.Check
+                                                        type={type}
+                                                        id={`default-`}
+                                                        label={`add to your emissions total?`}
+                                                    />
+                                                </div>
+                                            ))}
+                                        </Form>
+                                        <Button className="darkgreen-background" size="lg" onClick={(e) => this.updatePlantQuantity(e)}>Confirm</Button>
+                                    </Container>
+                                </Modal.Body>
+                            </Modal>
+                        </Col>
+                    </Row>
+                </Container>
+            </Col>
+        )
+                                            } else {
+                                                return (<div />)
+                                            }
                                         }
 }
 export default Plant;

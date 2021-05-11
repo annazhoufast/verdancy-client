@@ -40,6 +40,7 @@ export class ResultGroup extends React.Component {
     }
 
     render() {
+        // console.log(localStorage.getItem("ups"))
         if (!this.state.isLoaded) {
             return <div>Loading...</div> 
         } else {

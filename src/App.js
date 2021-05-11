@@ -102,11 +102,12 @@ class App extends Component {
         this.setState({ user });
     }
 
-    componentDidMount() {
+    async componentDidMount() {
         // getUserPlants = async () => {
         // this.getUserPlants();
         // setInterval(this.getData, 5000);
-        const response = fetch("https://verdancy.capstone.ischool.uw.edu/v1/plants")
+        // const [response, response2] = await Promise.all([
+            fetch("https://verdancy.capstone.ischool.uw.edu/v1/plants")
             .then(res => res.json())
             .then((result) => {
                 console.log(result);
@@ -118,23 +119,20 @@ class App extends Component {
                         </Route>
                     )
                 ));
-            });
-        // console.log(this.state.authToken)
-        // if (this.state.authToken) {
-        //     fetch("https://verdancy.capstone.ischool.uw.edu/v1/UserPlants/", {
-        //         method: 'GET',
-        //         headers: new Headers({
-        //             'Authorization': this.state.authToken
-        //         })
-        //     }).then(res => res.json())
-        //         .then((result) => {
-        //             // console.log(result);
-        //             // this.setState({userPlants: result});
-        //             this.state.userPlants = result;
-        //             // console.log(this.state.userPlants);
-        //         });
-        // }
-        // console.log(this.state.userPlants);
+            })
+        //         fetch("https://verdancy.capstone.ischool.uw.edu/v1/UserPlants/", {
+        //             method: 'GET',
+        //             headers: new Headers({
+        //                 'Authorization': this.state.auth
+        //             }).then(res => res.json())
+        //                 .then((result) => {
+        //                     this.setState({userPlants: result});
+        //                     console.log(this.state.userPlants);
+        //                 })
+        // })
+        // ]);
+        
+       
 
     }
 

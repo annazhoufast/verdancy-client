@@ -16,10 +16,7 @@ export class Search extends React.Component {
 
     render() {
             return (
-                <div>
-                    <h2>search our vegetable database</h2>
-                    <ResultGroup plants={this.state.plants} />
-                </div>
+                <ResultGroup plants={this.state.plants} />
             )
     }
 }

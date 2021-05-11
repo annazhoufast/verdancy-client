@@ -26,7 +26,7 @@ export class SearchBar extends React.Component {
                         <h2>search our plant database</h2>
                         <InputGroup className="mb-3" onChange={this.handleOnInputChange}>
                             <FormControl
-                                placeholder="Enter Vegetable Name Here"
+                                placeholder="Enter vegetable name here"
                                 aria-label="plantName"
                                 aria-describedby="basic-addon2"
                                 />

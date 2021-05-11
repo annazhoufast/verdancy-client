@@ -7,7 +7,7 @@ export class Background extends React.Component {
           <section>
             <div className="container">
               <Row>
-                <div id="background-desc" className="left-stuff">
+                <div id="background-desc">
                   <h2>the background</h2>
                   <br />
                   <p>
@@ -20,7 +20,7 @@ export class Background extends React.Component {
                   </p>
                 </div>
                 <img src="https://raw.githubusercontent.com/annazhoufast/verdancy-client/main/src/imgs/home/garden.png?token=AKMRZNSB6JWNVQUIDQA3GV3ATLFWA"
-                alt="carbon footprint illustration" id="background-img"/>
+                alt="carbon footprint illustration" id="background-img" className="right-stuff"/>
               </Row>
             </div>
           </section>

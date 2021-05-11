@@ -111,7 +111,7 @@ class SignUp extends Component {
             <Errors error={error} setError={this.setError} />
 
               <section className="left-half white-background">
-                  <div className="container test">
+                  <div className="container">
                     <h2>get started</h2>
                     <SignForm
                           setField={this.setField}

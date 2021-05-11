@@ -84,7 +84,7 @@ class SignIn extends Component {
 
 
             <section className="left-half white-background">
-                <div className="container test">
+                <div className="container">
                   <h2>sign in</h2>
                   <SignForm
                         setField={this.setField}

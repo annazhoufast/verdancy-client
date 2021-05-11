@@ -1,8 +1,19 @@
 import React, {Component} from 'react';
+import {Navbar, Nav, Button} from 'react-bootstrap';
 import {Row, Container} from "react-bootstrap";
 import {IndividualConversion} from "./IndividualConversion.js";
 
 export class Conversions extends React.Component {
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            toggleDisplay: "hidden",
+            toggleButton: "display-on"
+        };
+    }
+
     render() {
 
       // using IndividualConversion component
@@ -53,8 +64,37 @@ export class Conversions extends React.Component {
                   </Row>
                 </div>
               </Row>
+              <Button className={`green-button calculated-info ${ this.state.toggleButton}`} size="lg" onClick={this.showDisplay.bind(this)}>
+                  <span>How are these numbers calculated?</span>
+              </Button>
+              <div className={`centered ${ this.state.toggleDisplay}`}>
+                  <h3 className="calculated-info">How are these numbers being calculated?</h3>
+                  <br />
+                  <p>
+                      “Carbon dioxide equivalent” or “CO2e” is a term for describing different greenhouse gases in a common unit. For any quantity and type of greenhouse gas, CO2e signifies the amount
+                      of CO2 which would have the equivalent global warming impact.
+                  </p>
+                  <Button className="green-button co2e-info" size="lg" onClick={this.hideDisplay.bind(this)}>
+                      <span>OK, got it!</span>
+                  </Button>
+              </div>
             </div>
           </section>
         )
     }
+
+    showDisplay= () => {
+        this.setState({
+          toggleDisplay: "display-on",
+          toggleButton: "hidden"
+        })
+    }
+
+    hideDisplay= () => {
+        this.setState({
+          toggleDisplay: "hidden",
+          toggleButton: "display-on"
+        })
+    }
+
 }

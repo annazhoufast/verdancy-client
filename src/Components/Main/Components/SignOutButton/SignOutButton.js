@@ -24,7 +24,7 @@ const SignOutButton = ({ setAuthToken, setUser }) => {
         setError("");
         setAuthToken("");
         setUser(null);
-    }} className="green-background">Sign out</Button>
+    }} className="cream-background" id="sign-out">sign out</Button>
         {error &&
             <div>
                 <Errors error={error} setError={setError} />

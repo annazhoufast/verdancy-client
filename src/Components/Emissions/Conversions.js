@@ -41,7 +41,8 @@ export class Conversions extends React.Component {
             <div className="container">
               <Row>
                 <div className="centered">
-                  <h3 className="centered emissions-header">Let’s break this down! Saving {emissions} g CO2e is the same as saving...</h3>
+                  <h3 id="conversion-top-h3">Let’s break this down!</h3>
+                  <h3 id="conversion-bottom-h3">Saving <span className="green-text">{emissions} gCO2e</span> is the same as saving...</h3>
                   <Row>
                       <div className="conversion centered">
                           <img src="https://raw.githubusercontent.com/annazhoufast/verdancy-client/main/src/imgs/emissions/car.png?token=AKMRZNXOPVFGSU5YMOZHRMTAT3752"

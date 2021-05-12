@@ -167,7 +167,7 @@ section {
 .background-num {
   font-size: 34pt;
   font-weight: bold;
-  color: #194B19;
+  color: #679967;
 }
 
 #background-desc {
@@ -376,6 +376,14 @@ section {
 .emissions-header {
   width: 50%;
   padding-top: 3rem;
+  padding-bottom: 4rem;
+}
+
+#conversion-top-h3 {
+  padding-top: 3rem;
+}
+
+#conversion-bottom-h3 {
   padding-bottom: 4rem;
 }
 

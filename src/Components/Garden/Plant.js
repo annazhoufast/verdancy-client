@@ -105,10 +105,10 @@ class Plant extends Component {
                             <span className="font-size-14">{this.state.total}</span>
                             <br />
                             <br />
-                            <span className="font-size-14"><b>Total CO2e Saved</b></span>
+                            <span className="font-size-14"><b>Total Emissions Saved</b></span>
                             <br />
                             {/* <p>{this.props.totCarbon} g</p> */}
-                            <span className="font-size-14">{this.state.totalCO2} g CO2e</span>
+                            <span className="font-size-14">{this.state.totalCO2} gCO2e</span>
                             <br />
                             <br />
                             <Button onClick={() => this.setState({lgShow: true})} block variant="success">Harvest</Button>

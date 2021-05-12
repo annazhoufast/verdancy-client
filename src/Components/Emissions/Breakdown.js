@@ -95,7 +95,7 @@ export class Breakdown extends React.Component {
             .style("font", "20pt Sans-serif")
             .style("fill", "white");
 
-          an.text(`g of CO2e Emissions`);
+          an.text(`gCO2e`);
     }
 
     componentDidMount() {

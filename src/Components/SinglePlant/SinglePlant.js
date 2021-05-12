@@ -88,7 +88,7 @@ export class SinglePlant extends React.Component {
                               </Col>
                           </Row>
                           <Row>
-                              <p className="darkgreen-text"><b>{items.CO2PerUnit} g CO2e</b> saved per tomato | <b>Gardening Difficulty:</b> {items.Difficulty} | <b>Zones:</b> {items.ZoneStart} - {items.ZoneEnd} | <b>Height:</b> {items.Height} inches</p>
+                              <p className="darkgreen-text"><b>{items.CO2PerUnit} gCO2e</b> saved per unit | <b>Gardening Difficulty:</b> {items.Difficulty} | <b>Zones:</b> {items.ZoneStart} - {items.ZoneEnd} | <b>Height:</b> {items.Height} inches</p>
                           </Row>
                       </Container>
 

@@ -19,7 +19,7 @@ export class Background extends React.Component {
                     through home gardening can drastically reduce your carbon footprint. Let us show you how!
                   </p>
                 </div>
-                <img src="https://raw.githubusercontent.com/annazhoufast/verdancy-client/main/src/imgs/home/garden.png?token=AKMRZNSB6JWNVQUIDQA3GV3ATLFWA"
+                <img src="https://raw.githubusercontent.com/annazhoufast/verdancy-client/main/src/imgs/home/garden.png?token=AKMRZNUCIFHUK7BFHVWF2O3AUSQ56"
                 alt="carbon footprint illustration" id="background-img" className="right-stuff"/>
               </Row>
             </div>

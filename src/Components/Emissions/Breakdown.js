@@ -26,11 +26,11 @@ export class Breakdown extends React.Component {
         const color = d3.scaleOrdinal()
             .domain(yeet.map(d => d.PlantName))
             .range(["#F4EBC2", "#D8C469", "#feffa6", "#E89B55"]);
-        
+
 
         const max_CO2 = d3.max(data, d => d.TotalCO2);
 
-        
+
 
         const x_scale = d3.scaleLinear()
             .domain([0, max_CO2])
@@ -94,8 +94,8 @@ export class Breakdown extends React.Component {
             .style("text-anchor", "middle")
             .style("font", "20pt Sans-serif")
             .style("fill", "white");
-          
-          an.text(`g of CO2 Emissions`);
+
+          an.text(`g of CO2e Emissions`);
     }
 
     componentDidMount() {

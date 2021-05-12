@@ -78,11 +78,11 @@ export class SinglePlant extends React.Component {
                               </Col>
                               <Col className="add-more">
                                   {this.state.inGarden ?
-                                    <Button variant="success" size="lg" className="add-button darkgreen-background">
+                                    <Button variant="success" size="lg" className="add-button" variant="success">
                                         <FontAwesomeIcon icon={faCheck} /> added to Garden
                                     </Button>
                                       :
-                                      <Button variant="success" size="lg" className="add-button darkgreen-background" onClick={this.addToGarden}>+ add to garden</Button>
+                                      <Button variant="success" size="lg" className="add-button" variant="success" onClick={this.addToGarden}>+ add to garden</Button>
                                   }
 
                               </Col>

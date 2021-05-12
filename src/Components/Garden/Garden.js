@@ -14,7 +14,7 @@ export class Garden extends React.Component {
                     </Col>
                     <Col className="add-more">
                         <Link to="/search">
-                            <Button className="green-button add-button" size="lg">+ add more plants</Button>
+                            <Button className="add-button" variant="success" size="lg">+ add more vegetables</Button>
                         </Link>
                     </Col>
                 </Row>

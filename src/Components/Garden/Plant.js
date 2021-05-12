@@ -33,7 +33,7 @@ class Plant extends Component {
         }
         this.setState({inGarden: false});
     }
-    
+
     updatePlantQuantity = async (e) => {
         e.preventDefault();
         console.log("hello");
@@ -90,51 +90,53 @@ class Plant extends Component {
                         <Col lg={7} className="harvest">
                             <Row>
                                 <Col>
-                                    <h4>
-                                        <b>{this.props.pName}</b>
-                                    </h4>
+                                    <h3>{this.props.pName}</h3>
+                                    {/*<span font-size-16><b>{this.props.pName}</b></span>*/}
                                 </Col>
                                 <Col>
-                                    <FontAwesomeIcon icon={faTimes} onClick={(e) => this.deletePlant(e)} />
+                                    <Button id="remove-plant" onClick={(e) => this.deletePlant(e)} block className="cream-button">
+                                        <FontAwesomeIcon icon={faTimes} />
+                                    </Button>
                                 </Col>
                             </Row>
-                            <p>Harvest Total</p>
+                            <span className="font-size-14"><b>Total Harvested</b></span>
+                            <br />
                             {/* <p>{this.props.quantity}</p> */}
-                            <p>{this.state.total}</p>
-                            <p>Carbon Emissions Saved</p>
+                            <span className="font-size-14">{this.state.total}</span>
+                            <br />
+                            <br />
+                            <span className="font-size-14"><b>Total CO2e Saved</b></span>
+                            <br />
                             {/* <p>{this.props.totCarbon} g</p> */}
-                            <p>{this.state.totalCO2} g CO2</p>
-                            <Button onClick={() => this.setState({lgShow: true})} block className="darkgreen-background">Harvest!</Button>
+                            <span className="font-size-14">{this.state.totalCO2} g CO2e</span>
+                            <br />
+                            <br />
+                            <Button onClick={() => this.setState({lgShow: true})} block variant="success">Harvest</Button>
                             <Modal
                                 size="lg"
                                 show={this.state.lgShow}
                                 onHide={() => this.setState({lgShow: false})}
                                 aria-labelledby="example-modal-sizes-title-lg"
                             >
-                                <Modal.Header closeButton></Modal.Header>
+                                <Modal.Header className="centered" closeButton>
+                                    <b>How many {this.props.pName} are you harvesting?</b>
+                                </Modal.Header>
                                 <Modal.Body>
-                                    <Container>
-                                        <Row>
-                                            <Col>
-                                                <p>How much {this.props.pName} did you harvest?</p>
-                                            </Col>
-                                            <Col>
-                                                <NumericInput min={0} value={this.state.quant} onChange={this.updateQ} />
-                                                <p>{this.state.quant}</p>
-                                            </Col>
-                                        </Row>
-                                        <Form>
+                                    <Container id="confirm-harvest">
+                                        <NumericInput min={0} value={this.state.quant} onChange={this.updateQ} />
+                                        {/*}<p>{this.state.quant}</p>*/}
+                                        <Form id="checkbox">
                                             {['checkbox'].map((type) => (
-                                                <div key={`default-`} className="mb-3">
-                                                    <Form.Check
-                                                        type={type}
-                                                        id={`default-`}
-                                                        label={`add to your emissions total?`}
-                                                    />
-                                                </div>
+                                                  <div key={`default-`} className="mb-3">
+                                                      <Form.Check
+                                                          type={type}
+                                                          id={`default-`}
+                                                          label={`add to your emissions total?`}
+                                                      />
+                                                  </div>
                                             ))}
                                         </Form>
-                                        <Button className="darkgreen-background" size="lg" onClick={(e) => this.updatePlantQuantity(e)}>Confirm</Button>
+                                        <Button variant="success" size="lg" onClick={(e) => this.updatePlantQuantity(e)}>Confirm</Button>
                                     </Container>
                                 </Modal.Body>
                             </Modal>

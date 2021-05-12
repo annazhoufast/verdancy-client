@@ -46,24 +46,22 @@ export class Result extends React.Component {
                         <Link to={linkToPlant}>
                             <Card.Img variant="top" src={this.props.image} className="full-img" />
                         </Link>
-                        {/* COME BACK AND DEAL W/ THIS */}
-                        {this.state.inGarden ? <Button variant="success">
-                            <FontAwesomeIcon icon={faCheck} />
-                        </Button>
-                        : <Button variant="outline-success" onClick={addToGarden}>+</Button>}
-                        
                     </div>
                     <Card.Body>
                         <Card.Title>
-                            <Link to={linkToPlant}>
+                            <Link id="plant-title" className="link" to={linkToPlant}>
                                 <h3>{this.props.pName}</h3>
                             </Link>
                         </Card.Title>
-                        <Card.Text>
-                            <i>{this.props.pSName}</i>
-                            <br/>
-                            Difficulty: {this.props.difficulty}
+                        <Card.Text id="plant-preview">
+                            <p className="font-size-14"><i>{this.props.pSName}</i></p>
+                            <p className="font-size-14"><b>Difficulty:</b> {this.props.difficulty}</p>
                         </Card.Text>
+                        {/* COME BACK AND DEAL W/ THIS */}
+                        {this.state.inGarden ? <Button className="search-button" variant="success">
+                            <FontAwesomeIcon icon={faCheck} />
+                        </Button>
+                        : <Button className="search-button" variant="outline-success" onClick={addToGarden}>+ add to garden</Button>}
                     </Card.Body>
                 </Card>
             </Col>

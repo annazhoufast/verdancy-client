@@ -131,8 +131,8 @@ class App extends Component {
         //                 })
         // })
         // ]);
-        
-       
+
+
 
     }
 
@@ -192,7 +192,7 @@ class App extends Component {
                     {user ? <Redirect to="/emissions" /> :
                         <SignUp setPage={this.setPage} setAuthToken={this.setAuthToken} setUser={this.setUser} />}
                 </Route>
-                
+
                 {/* this is terrible code im sorry but i cant think of anything else */}
                 {this.state.singlePlants}
             </Switch>

@@ -5,8 +5,8 @@
         "FrontAlt": "getting started card",
         "BackAlt": "getting started description",
         "Desc": "Start with a low maintenance plant! Green onions, potatoes, lettuce, cucumbers, or basil are great vegetables to kickstart your garden. You can begin planting by using food scraps!",
-        "Front": "https://raw.githubusercontent.com/annazhoufast/verdancy-client/main/src/imgs/advice/started-front.png?token=AKMRZNQDGLUTHBB4GU2HH63ATLRUS",
-        "Back": "https://raw.githubusercontent.com/annazhoufast/verdancy-client/main/src/imgs/advice/started-back.png?token=AKMRZNXXOCBZSBSPNAM372DATLRXW"
+        "Front": "https://raw.githubusercontent.com/annazhoufast/verdancy-client/main/src/imgs/advice/started-front.png?token=AKMRZNUTO3YWNXPKLJ2PAFTAUTK7S",
+        "Back": "https://raw.githubusercontent.com/annazhoufast/verdancy-client/main/src/imgs/advice/started-back.png?token=AKMRZNS4YR7SHDTNM6WMPJ3AUTLEY"
     },
     {
         "Name": "Watering",
@@ -14,7 +14,7 @@
         "FrontAlt": "watering card",
         "BackAlt": "watering description",
         "Desc": "The #1 mistake beginners make is overwatering! Plants love water, but also love to dry out. Drainage holes are extremely important. Make sure to never let your plant sit in water!",
-        "Front": "https://raw.githubusercontent.com/annazhoufast/verdancy-client/main/src/imgs/advice/water-front.png?token=AKMRZNQWAWZNTP2GTINWZDLATLR2K",
+        "Front": "https://raw.githubusercontent.com/annazhoufast/verdancy-client/main/src/imgs/advice/water-front.png?token=AKMRZNVTOERZKEZLKHZGAYDAUTLCC",
         "Back": "https://raw.githubusercontent.com/annazhoufast/verdancy-client/main/src/imgs/advice/water-back.png?token=AKMRZNXXKEPKYSDSKPA7LITATTAZ4"
     },
     {
@@ -23,7 +23,7 @@
         "FrontAlt": "sunlight card",
         "BackAlt": "sunlight description",
         "Desc": "Growing vegetables in limited sunlight can be a pain. Your best bet is to relocate your pots and containers throughout the day to maximize sunlight exposure. Most plants need at least 6 hours of direct sun daily.",
-        "Front": "https://raw.githubusercontent.com/annazhoufast/verdancy-client/main/src/imgs/advice/sun-front.png?token=AKMRZNQEIK4YJTI36Y2QDQTATLR5A",
+        "Front": "https://raw.githubusercontent.com/annazhoufast/verdancy-client/main/src/imgs/advice/sun-front.png?token=AKMRZNQMIMMX72INY7CZUB3AUTLBE",
         "Back": "https://raw.githubusercontent.com/annazhoufast/verdancy-client/main/src/imgs/advice/sun-back.png?token=AKMRZNTDHRUS5J72XF4OO3LATTAZC"
     },
     {
@@ -32,8 +32,8 @@
         "FrontAlt": "mulching card",
         "BackAlt": "mulching description",
         "Desc": "Level up your garden by mulching! Mulch is a combination of materials like grass clippings, leaves, sawdust, and woodchips. Mulching helps with retaining moisture and protecting vegetables from the sun.",
-        "Front": "https://raw.githubusercontent.com/annazhoufast/verdancy-client/main/src/imgs/advice/mulch-front.png?token=AKMRZNTGDGJKUQ44PMSMSHDATLSAS",
-        "Back": "https://raw.githubusercontent.com/annazhoufast/verdancy-client/main/src/imgs/advice/mulch-back.png?token=AKMRZNUVONR7D45CDMZ3ODDATLSAW"
+        "Front": "https://raw.githubusercontent.com/annazhoufast/verdancy-client/main/src/imgs/advice/mulch-front.png?token=AKMRZNXEZB4VQO44DVL5AJTAUTK4Y",
+        "Back": "https://raw.githubusercontent.com/annazhoufast/verdancy-client/main/src/imgs/advice/mulch-back.png?token=AKMRZNR4XOYWZPLBJNCKBV3AUTLEU"
     },
     {
         "Name": "Soil",
@@ -41,7 +41,7 @@
         "FrontAlt": "soil card",
         "BackAlt": "soil description",
         "Desc": "Different vegetables will thrive in different soils. For beginners, stick with Miracle-Gro® All Purpose Garden soil and you can’t go wrong. This one is rich in nutrients and good with drainage!",
-        "Front": "https://raw.githubusercontent.com/annazhoufast/verdancy-client/main/src/imgs/advice/soil-front.png?token=AKMRZNSTX5STELP4SKAQHATATLR64",
+        "Front": "https://raw.githubusercontent.com/annazhoufast/verdancy-client/main/src/imgs/advice/soil-front.png?token=AKMRZNU3TYNFI2VZ5ETVUOLAUTK6Y",
         "Back": "https://raw.githubusercontent.com/annazhoufast/verdancy-client/main/src/imgs/advice/soil-back.png?token=AKMRZNSZGFNLHYKSWPES2FLATTAXW"
     },
     {
@@ -50,7 +50,7 @@
         "FrontAlt": "pots card",
         "BackAlt": "pots description",
         "Desc": "No need for fancy terracotta or porcelain pots. A handy tin can, yogurt container, colander, teapot, or even muffin tin makes the perfect makeshift pot for your vegetable seeds.",
-        "Front": "https://raw.githubusercontent.com/annazhoufast/verdancy-client/main/src/imgs/advice/pots-front.png?token=AKMRZNUPNQW4YFPQZEUDPTDATLSCS",
+        "Front": "https://raw.githubusercontent.com/annazhoufast/verdancy-client/main/src/imgs/advice/pots-front.png?token=AKMRZNXQXCXDVNHNMKVF33LAUTK52",
         "Back": "https://raw.githubusercontent.com/annazhoufast/verdancy-client/main/src/imgs/advice/pots-back.png?token=AKMRZNUVSRLPHJCYVBRQAY3ATTAWY"
     }
 ]

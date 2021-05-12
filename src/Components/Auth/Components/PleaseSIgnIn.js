@@ -16,7 +16,7 @@ export class PleaseSignIn extends React.Component {
                 <p>Please <Link to="/signup" className="link"><b>create an account</b></Link>,
                 or <Link to="/signin" className="link"><b>sign in</b></Link> if you already have one.</p>
                 <div className="centered">
-                  <img src="https://raw.githubusercontent.com/annazhoufast/verdancy-client/main/src/imgs/carrot.png?token=AKMRZNUXRY5NX576E36QISDATLEQQ"
+                  <img src="https://raw.githubusercontent.com/annazhoufast/verdancy-client/main/src/imgs/carrot.png?token=AKMRZNXBLK7B7VMG4O6REP3AUSQ2Q"
                   alt="sad carrot"/>
                 </div>
             </div>

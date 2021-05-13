@@ -474,6 +474,10 @@ section {
   width: 80%;
 }
 
+.img-100 {
+    width: 100%;
+}
+
 /* mobile specs */
 
 @media only screen and (min-width:768px) and (max-width:1200px) {

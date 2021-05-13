@@ -12,16 +12,13 @@ export class Breakdown extends React.Component {
 
     drawChart(data) {
         // const data = this.state.data;
-        console.log(data);
         const margin = ({ top: 20, right: 60, bottom: 40, left: 40 });
 
         const height = 700;
 
-        const width = window.innerWidth - 400;
+        const width = window.innerWidth - 200;
 
         const yeet = d3.sort(data, d => d.TotalCO2);
-
-        console.log(yeet);
 
         const color = d3.scaleOrdinal()
             .domain(yeet.map(d => d.PlantName))

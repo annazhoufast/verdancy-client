@@ -78,24 +78,24 @@ export class LandingPage extends React.Component {
                         <h3>From our research, we discovered that...</h3>
                         <Row className="left-align">
                             <Col lg={4} >
-                                <h2><span className="darkgreen-text">1.</span></h2>
+                                <h2>1.</h2>
                                 <p>
-                                    About <span className="darkgreen-text"><b>8%</b></span> of your personal carbon footprint comes from
-                                    <span className="darkgreen-text"><b> food</b></span>. Emissions come from transport, storage, and packaging.
+                                    About <b>8%</b> of your personal carbon footprint comes from
+                                    <b> food</b>. Emissions come from transport, storage, and packaging.
                                 </p>
                             </Col>
                             <Col lg={4} >
-                                <h2><span className="darkgreen-text">2.</span></h2>
+                                <h2>2.</h2>
                                 <p>
                                     In a survey of 485 reponses, the biggest motivator to grow your own vegetables was the opportunity to be
-                                    <span className="darkgreen-text"><b> sustainable</b></span>.
+                                    <b> sustainable</b>.
                                 </p>
                             </Col>
                             <Col lg={4} >
-                                <h2><span className="darkgreen-text">3.</span></h2>
+                                <h2>3.</h2>
                                 <p>
-                                    There is a gap in the market for a resource that ties <span className="darkgreen-text"><b>gardening </b></span>
-                                    together with <span className="darkgreen-text"><b>personal environmental impact</b></span>.
+                                    There is a gap in the market for a resource that ties <b>gardening </b>
+                                    together with <b>personal environmental impact</b>.
                                 </p>
                             </Col>
                         </Row>
@@ -128,10 +128,19 @@ export class LandingPage extends React.Component {
                     <div className="centered">
                       <h2>who we are</h2>
                       <Team />
-                      <p id="who-we-are" className="paragraph-width centered">
-                          We are students from the University of Washington Information School.
-                          Verdancy is our cumulative Capstone project in our final undergraduate year.
-                      </p>
+                      <div id="who-we-are">
+                          <p className="paragraph-width centered">
+                              We are students from the University of Washington Information School.
+                              Verdancy is our cumulative Capstone project in our final undergraduate year.
+                          </p>
+                          <br />
+                          <br />
+                          <p className="paragraph-width centered">
+                              We went through the entire iterative design process to build Verdancy: starting with research
+                              of our problem space and stakeholders, conducting user interviews, concept validation, and further
+                              user testing. To develop our website, we used React.js, Golang, MySQL, and Docker.
+                          </p>
+                      </div>
                     </div>
                 </div>
               </section>

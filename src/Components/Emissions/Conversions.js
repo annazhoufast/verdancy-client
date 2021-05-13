@@ -80,7 +80,11 @@ export class Conversions extends React.Component {
                   <div id="calculated-desc">
                       <p>
                         To bridge the gap between home-gardened vegetables and carbon emissions, we compiled a collection of resources together for our database.
-                        First, we collected the average weight for the individual unit (one tomato, one sprig of basil, etc.) of each vegetable from the U.S.
+                        First, we collected vegetable data from <a href="https://sympathink.com/vegetables/" className="link" target="_blank"><b>Sympathink’s Garden Calendar </b></a>
+                        and <a href="https://github.com/damwhit/harvest_helper" className="link" target="_blank"><b>Dave’s Harvest Helper database</b></a> to provide the vegetables for our platform.
+                      </p>
+                      <p>
+                        We then collected the average weight for the individual unit (one tomato, one sprig of basil, etc.) of each vegetable from the U.S.
                         Department of Agriculture's <a href="https://fdc.nal.usda.gov/" className="link" target="_blank"><b>FoodData Central API</b></a>.
                       </p>
                       <p>

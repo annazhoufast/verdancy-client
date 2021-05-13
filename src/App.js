@@ -110,7 +110,6 @@ class App extends Component {
             fetch("https://verdancy.capstone.ischool.uw.edu/v1/plants")
             .then(res => res.json())
             .then((result) => {
-                console.log(result);
                 this.setState({plants: result});
                 result.map(cur => (
                     this.state.singlePlants.push(
@@ -139,7 +138,6 @@ class App extends Component {
 
 
   render() {
-    console.log(this.state.id);
     const { page, user } = this.state;
       return (
         <Router basename={process.env.PUBLIC_URL} >

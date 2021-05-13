@@ -1,5 +1,6 @@
 import React, {Component, useState} from 'react';
 import {Card, Button, Row, Col, Modal, Form, Container} from 'react-bootstrap';
+import {Link, Route} from 'react-router-dom';
 import "bootstrap/dist/css/bootstrap.min.css";
 import NumericInput from 'react-numeric-input';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -76,6 +77,7 @@ class Plant extends Component {
 
     render() {
         console.log(this.state.quant)
+        const linkToPlant = "/plant/" + this.props.id;
         if (this.state.inGarden) {
         return (
             <Col lg={6} className="harvest-card">
@@ -84,13 +86,16 @@ class Plant extends Component {
                         <Col lg={5}>
                             {/* <img src="https://raw.githubusercontent.com/annazhoufast/plantastic/main/data/imgs/tomatoe.png?token=ALLXA23MPOVXSKYWA7DGQXTAULINM"
                                 alt="drawing of plant" className="garden-img" /> */}
-                            <img src={this.props.img}
-                                alt="drawing of plant" className="garden-img" />
+                            <Link to={linkToPlant}>
+                                <img src={this.props.img} alt="drawing of plant" className="garden-img" />
+                            </Link>
                         </Col>
                         <Col lg={7} className="harvest">
                             <Row>
                                 <Col>
-                                    <h3>{this.props.pName}</h3>
+                                    <Link id="plant-title" className="link" to={linkToPlant}>
+                                        <h3>{this.props.pName}</h3>
+                                    </Link>
                                     {/*<span font-size-16><b>{this.props.pName}</b></span>*/}
                                 </Col>
                                 <Col>
@@ -124,19 +129,10 @@ class Plant extends Component {
                                 <Modal.Body>
                                     <Container id="confirm-harvest">
                                         <NumericInput min={0} value={this.state.quant} onChange={this.updateQ} />
-                                        {/*}<p>{this.state.quant}</p>*/}
-                                        <Form id="checkbox">
-                                            {['checkbox'].map((type) => (
-                                                  <div key={`default-`} className="mb-3">
-                                                      <Form.Check
-                                                          type={type}
-                                                          id={`default-`}
-                                                          label={`add to your emissions total?`}
-                                                      />
-                                                  </div>
-                                            ))}
-                                        </Form>
-                                        <Button variant="success" size="lg" onClick={(e) => this.updatePlantQuantity(e)}>Confirm</Button>
+                                        <br />
+                                        <Button id="confirm-button" variant="success" size="lg" onClick={(e) => this.updatePlantQuantity(e)}>
+                                            Harvest {this.state.quant} {this.props.pName}?
+                                        </Button>
                                     </Container>
                                 </Modal.Body>
                             </Modal>

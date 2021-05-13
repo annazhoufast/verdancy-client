@@ -53,7 +53,8 @@ export class PlantGroup extends React.Component {
             //                     quantity={this.state.stuff[i].Total}
             //                     totCarbon={this.state.stuff[i].TotalCO2}
             //                     pID={this.state.stuff[i].PlantID} />);
-            plants.push(<Plant img={this.state.items[i].ImageLink}
+            plants.push(<Plant id={this.state.items[i].PlantID}
+                            img={this.state.items[i].ImageLink}
                             pName={this.state.items[i].PlantName}
                             quantity={this.state.items[i].Total}
                             totCarbon={this.state.items[i].TotalCO2}

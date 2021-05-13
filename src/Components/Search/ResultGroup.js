@@ -50,16 +50,15 @@ export class ResultGroup extends React.Component {
                         <div className="container">
                             <h2>search our vegetable database</h2>
                             <div>
-                                {/* <h2>search our plant database</h2> */}
                                 <InputGroup className="mb-3" onChange={this.editSearchTerm}>
                                     <FormControl
                                         placeholder="Enter vegetable name here"
                                         aria-label="plantName"
                                         aria-describedby="basic-addon2"
                                         />
-                                    <InputGroup.Append>
+                                    {/*<InputGroup.Append>
                                         <Button variant="outline-success">search</Button>
-                                    </InputGroup.Append>
+                                    </InputGroup.Append>*/}
                                 </InputGroup>
                             </div>
                         </div>

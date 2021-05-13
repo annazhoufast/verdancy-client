@@ -1,4 +1,10 @@
 import React, {Component} from 'react';
+import {
+    HashRouter as Router,
+    Switch,
+    Route,
+    Link
+} from 'react-router-dom';
 import {Navbar, Nav, Button} from 'react-bootstrap';
 import {Row, Container} from "react-bootstrap";
 import {IndividualConversion} from "./IndividualConversion.js";
@@ -66,15 +72,32 @@ export class Conversions extends React.Component {
                 </div>
               </Row>
               <Button className={`green-button calculated-info ${ this.state.toggleButton}`} size="lg" onClick={this.showDisplay.bind(this)}>
-                  <span>How are these numbers calculated?</span>
+                  <span>How are all these numbers calculated?</span>
               </Button>
               <div className={`centered ${ this.state.toggleDisplay}`}>
-                  <h3 className="calculated-info">How are these numbers being calculated?</h3>
+                  <h3 className="calculated-info">How are all these numbers calculated?</h3>
                   <br />
-                  <p>
-                      “Carbon dioxide equivalent” or “CO2e” is a term for describing different greenhouse gases in a common unit. For any quantity and type of greenhouse gas, CO2e signifies the amount
-                      of CO2 which would have the equivalent global warming impact.
-                  </p>
+                  <div id="calculated-desc">
+                      <p>
+                        To bridge the gap between home-gardened vegetables and carbon emissions, we compiled a collection of resources together for our database.
+                        First, we collected the average weight for the individual unit (one tomato, one sprig of basil, etc.) of each vegetable from the U.S.
+                        Department of Agriculture's <a href="https://fdc.nal.usda.gov/" className="link" target="_blank"><b>FoodData Central API</b></a>.
+                      </p>
+                      <p>
+                        With this average weight for each vegetable, we then used the <a href="https://myemissions.green/food-carbon-footprint-calculator/" className="link" target="_blank">
+                        <b>Food Carbon Footprint Calculator</b></a> from My Emissions, a company that advocates for the environmental impact of food sourcing. Using this calculator,
+                        we determined the average amount of carbon emissions saved per vegetable. When vegetables are harvested in the My Garden feature, we use these
+                        numbers to calculate your overall total for carbon emissions saved.
+                      </p>
+                      <p>
+                        For converting gCO2e to other metrics such as water and plastic saved, we researched resources from the U.S. Environmental Protection Agency to find <a href="https://www.epa.gov/energy/greenhouse-gases-equivalencies-calculator-calculations-and-references"
+                        className="link" target="_blank"><b>greenhosue gas equivalencies, rates, and references</b></a>. This data is used to convert your overall total of carbon emissions into more familiar terms!
+                      </p>
+                      <p>
+                        Of course, since all of these calculations are based off of averages, your emissions data is meant to be an estimate. However, we hope that this data still illustrates the great potential that
+                        home gardening can have on the environment, and encourages you to grow your own vegetables more often!
+                      </p>
+                  </div>
                   <Button className="green-button co2e-info" size="lg" onClick={this.hideDisplay.bind(this)}>
                       <span>OK, got it!</span>
                   </Button>

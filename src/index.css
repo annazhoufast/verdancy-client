@@ -88,7 +88,7 @@ section {
   color: #679967;
 }
 
-.brightgreen-text, #plant-title:hover, #please-sign-in .link:hover {
+.brightgreen-text, #plant-title:hover, #please-sign-in .link:hover, #calculated-desc .link:hover {
   color: #6ce688;
 }
 
@@ -322,6 +322,10 @@ section {
   margin-right: auto;
   padding: 3rem;
   text-align: center;
+}
+
+#confirm-button {
+  margin: 3rem;
 }
 
 /* advice */

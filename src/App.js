@@ -185,7 +185,7 @@ class App extends Component {
                     <Search stuff={this.state.plants} />
                 </Route>
                 <Route exact path="/signin">
-                    {user ? <Redirect to="/" /> :
+                    {user ? <Redirect to="/emissions" /> :
                         <SignIn setPage={this.setPage} setAuthToken={this.setAuthToken} setUser={this.setUser} />}
                 </Route>
                 <Route exact path="/signup">

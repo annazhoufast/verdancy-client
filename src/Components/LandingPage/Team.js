@@ -15,11 +15,9 @@ export class Team extends React.Component {
         }
 
         return (
-            <section>
               <div className="container">
                 <Row>
                   <div>
-                    <h2>meet the team</h2>
                     <br />
                     <Row>
                         {ppl}
@@ -27,7 +25,6 @@ export class Team extends React.Component {
                   </div>
                 </Row>
               </div>
-            </section>
         )
     }
 }

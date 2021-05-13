@@ -112,6 +112,14 @@ section {
   text-align: center;
 }
 
+.left-align {
+  text-align: left;
+}
+
+.right-align {
+  text-align: right;
+}
+
 .hidden, #mobile-message{
   display: none;
 }
@@ -470,12 +478,73 @@ section {
 
 /* landing page */
 
-#team-img {
-  width: 80%;
+#landing-page .shortened-section {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
-.img-100 {
-    width: 100%;
+#landing-page h2 {
+  padding-bottom: 3rem;
+}
+
+#landing-page h3 {
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+}
+
+.paragraph-width {
+  width: 75%;
+}
+
+.landing-center {
+  width: 100%;
+  margin: auto;
+}
+
+.landing-img {
+  width: 100%;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.landing-med-img {
+  width: 50%;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+#landing-intro {
+  padding-top: 2rem;
+}
+
+.landing-row {
+  padding-top: 2rem;
+  padding-bottom: 6rem;
+}
+
+.landing-row-img {
+  width: 100%;
+}
+
+#landing-steps h3, #meet-the-team h2{
+  padding-top: 0;
+}
+
+#problem-statement {
+  /*background img: blob*/
+}
+
+#meet-the-team h3, #problem h3 {
+  padding-bottom: 3rem;
+}
+
+#who-we-are {
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+}
+
+#team-img {
+  width: 80%;
 }
 
 /* mobile specs */
@@ -575,6 +644,17 @@ section {
   }
   #plant-img {
     margin-top: 3rem;
+  }
+  .landing-row-img {
+    width: 50%;
+  }
+  .right-align {
+    text-align: left;
+    padding-top: 2rem;
+  }
+  #team-img {
+    margin-top: 3rem;
+    width: 40%;
   }
   #mobile-message {
     display: block;

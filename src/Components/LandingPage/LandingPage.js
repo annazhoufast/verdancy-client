@@ -32,12 +32,12 @@ export class LandingPage extends React.Component {
                                 <p className="paragraph-width">search through our database to learn more about the vegetables you can plant and harvest</p>
                             </Col>
                             <Col lg={4}>
-                                <img className="landing-row-img" src="https://raw.githubusercontent.com/annazhoufast/plantastic/main/data/imgs/Corn.png?token=ALLXA2ZREMKPKGWVRBISDK3AUXQNE" />
+                                <img className="landing-row-img" src="https://raw.githubusercontent.com/annazhoufast/verdancy-client/main/src/imgs/landing/first%20screen.png?token=ALLXA2ZSAPZRBA2YG35C5RTAU35AI" />
                             </Col>
                         </Row>
                         <Row className="landing-row">
                             <Col lg={4}>
-                                <img className="landing-row-img" src="https://raw.githubusercontent.com/annazhoufast/plantastic/main/data/imgs/Corn.png?token=ALLXA2ZREMKPKGWVRBISDK3AUXQNE" />
+                                <img className="landing-row-img" src="https://raw.githubusercontent.com/annazhoufast/verdancy-client/main/src/imgs/landing/second%20screen.png?token=ALLXA22MQVNZOA3YNXPQLETAU35BS" />
                             </Col>
                             <Col lg={8} className="right-align">
                                 <h3 className="green-text">maintain your vegetables online</h3>
@@ -52,7 +52,7 @@ export class LandingPage extends React.Component {
                                 <p className="paragraph-width">view the carbon emissions you saved and see how easy it is to reduce your carbon footprint</p>
                             </Col>
                             <Col lg={4}>
-                                <img className="landing-row-img" src="https://raw.githubusercontent.com/annazhoufast/plantastic/main/data/imgs/Corn.png?token=ALLXA2ZREMKPKGWVRBISDK3AUXQNE" />
+                                <img className="landing-row-img" src="https://raw.githubusercontent.com/annazhoufast/verdancy-client/main/src/imgs/landing/third%20screen.png?token=ALLXA27TGWB563PAND5XWF3AU35CU" />
                             </Col>
                         </Row>
                   </div>
@@ -136,7 +136,7 @@ export class LandingPage extends React.Component {
                           <br />
                           <br />
                           <p className="paragraph-width centered">
-                              We went through the entire iterative design process to build Verdancy: starting with research
+                              We conducted the entire iterative design process to build Verdancy: starting with research
                               of our problem space and stakeholders, conducting user interviews, concept validation, and further
                               user testing. To develop our website, we used React.js, Golang, MySQL, and Docker.
                           </p>

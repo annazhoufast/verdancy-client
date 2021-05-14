@@ -14,6 +14,9 @@ export class Search extends React.Component {
         }
     }
 
+    componentDidMount() {
+        window.scrollTo(0, 0)
+      }
     render() {
             return (
                 <ResultGroup plants={this.state.plants} />

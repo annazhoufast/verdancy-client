@@ -8,7 +8,11 @@ import {
 import {Navbar, Nav, Button} from 'react-bootstrap';
 import {Row, Container} from "react-bootstrap";
 import {IndividualConversion} from "./IndividualConversion.js";
+import carig from '../../imgs/emissions/carig.png';
+import plasticig from '../../imgs/emissions/plasticig.png';
+import waterig from '../../imgs/emissions/waterig.png';
 
+// j
 export class Conversions extends React.Component {
 
     constructor(props) {
@@ -51,19 +55,19 @@ export class Conversions extends React.Component {
                   <h3 id="conversion-bottom-h3">Saving <span className="green-text">{emissions} gCO2e</span> is the same as saving...</h3>
                   <Row>
                       <div className="conversion centered">
-                          <img src="https://raw.githubusercontent.com/annazhoufast/verdancy-client/main/src/imgs/emissions/car.png?token=AKMRZNXOPVFGSU5YMOZHRMTAT3752"
+                          <img src={carig}
                           alt="car icon" className="individ-step"/>
                           <p className="conversion-num">{miles} miles</p>
                           <p>driven by a car</p>
                       </div>
                       <div className="conversion centered">
-                          <img src="https://raw.githubusercontent.com/annazhoufast/verdancy-client/main/src/imgs/emissions/plastic.png?token=AKMRZNTSZFZMDKOCGZ5YJCTAT4AEA"
+                          <img src={plasticig}
                           alt="plastic icon" className="individ-step"/>
                           <p className="conversion-num">{plastic} lbs</p>
                           <p>of plastic</p>
                       </div>
                       <div className="conversion centered">
-                          <img src="https://raw.githubusercontent.com/annazhoufast/verdancy-client/main/src/imgs/emissions/water.png?token=AKMRZNW6KS64XKJVDZQN4ELAT4AHM"
+                          <img src={waterig}
                           alt="water icon" className="individ-step"/>
                           <p className="conversion-num">{water} gal</p>
                           <p>of water</p>

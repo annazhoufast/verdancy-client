@@ -1,6 +1,10 @@
 import React, {Component} from 'react';
 import {Row, Container, Col} from "react-bootstrap";
 import {Team} from './Team';
+import firstscreen from '../../imgs/landing/firstscreen.png';
+import secondscreen from '../../imgs/landing/secondscreen.png';
+import thirdscreen from '../../imgs/landing/thirdscreen.png';
+import collage from '../../imgs/landing/collage.png';
 
 export class LandingPage extends React.Component {
 
@@ -15,7 +19,7 @@ export class LandingPage extends React.Component {
                   <div className="container">
                       <div className="centered landing-center">
                         <h2><span className="green-text">verdancy</span> helps you become more aware of your <span className="green-text">carbon footprint</span></h2>
-                        <img className="landing-img" src="https://raw.githubusercontent.com/annazhoufast/plantastic/main/data/imgs/Frame%2014.png?token=ALLXA2YMFL6ILMCWDAPETI3AUXPWI" alt="collage of wireframes from the verdancy website" />
+                        <img className="landing-img" src={collage} />
                         <p id="landing-intro" className="paragraph-width centered">
                             Gardening at home can offer huge benefits and make a positive impact on your carbon footprint. Verdancy is a place
                             where gardeners and growers alike can keep track of their carbon emissions with the vegetables they grow.
@@ -32,12 +36,12 @@ export class LandingPage extends React.Component {
                                 <p className="paragraph-width">search through our database to learn more about the vegetables you can plant and harvest</p>
                             </Col>
                             <Col lg={4}>
-                                <img className="landing-row-img" src="https://raw.githubusercontent.com/annazhoufast/verdancy-client/main/src/imgs/landing/first%20screen.png?token=AKMRZNWN5O6V4JHXDFTUZCLAU32N4" />
+                                <img className="landing-row-img" src={firstscreen} />
                             </Col>
                         </Row>
                         <Row className="landing-row">
                             <Col lg={4}>
-                                <img className="landing-row-img" src="https://raw.githubusercontent.com/annazhoufast/verdancy-client/main/src/imgs/landing/second%20screen.png?token=AKMRZNVPW27QHTVK54W5FJDAU32RC" />
+                                <img className="landing-row-img" src={secondscreen} />
                             </Col>
                             <Col lg={8} className="right-align">
                                 <h3 className="green-text">maintain your vegetables online</h3>
@@ -52,7 +56,7 @@ export class LandingPage extends React.Component {
                                 <p className="paragraph-width">view the carbon emissions you saved and see how easy it is to reduce your carbon footprint</p>
                             </Col>
                             <Col lg={4}>
-                                <img className="landing-row-img" src="https://raw.githubusercontent.com/annazhoufast/verdancy-client/main/src/imgs/landing/third%20screen.png?token=AKMRZNT7JBL4HMUC7RVCBX3AU32SC" />
+                                <img className="landing-row-img" src={thirdscreen} />
                             </Col>
                         </Row>
                   </div>

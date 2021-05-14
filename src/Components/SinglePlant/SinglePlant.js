@@ -22,6 +22,8 @@ export class SinglePlant extends React.Component {
     }
 
     componentDidMount() {
+
+        window.scrollTo(0, 0)
         const response = fetch("https://verdancy.capstone.ischool.uw.edu/v1/plants/" + this.state.id)
             .then(res => res.json())
             .then(

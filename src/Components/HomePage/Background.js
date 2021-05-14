@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Row, Container} from "react-bootstrap";
+import garden from '../../imgs/home/garden.png';
 
 export class Background extends React.Component {
     render() {
@@ -19,7 +20,7 @@ export class Background extends React.Component {
                     through home gardening can drastically reduce your carbon footprint. Let us show you how!
                   </p>
                 </div>
-                <img src="https://raw.githubusercontent.com/annazhoufast/verdancy-client/main/src/imgs/home/garden.png?token=AKMRZNUCIFHUK7BFHVWF2O3AUSQ56"
+                <img src={garden}
                 alt="carbon footprint illustration" id="background-img" className="right-stuff"/>
               </Row>
             </div>

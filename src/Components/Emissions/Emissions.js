@@ -16,6 +16,7 @@ export class Emissions extends React.Component {
     }
 
     async componentDidMount() {
+        window.scrollTo(0, 0)
         let [emissions] = await Promise.all([
             fetch("https://verdancy.capstone.ischool.uw.edu/v1/emissions/", {
                 method: 'GET',
@@ -29,31 +30,7 @@ export class Emissions extends React.Component {
         this.setState({
             totalEm: emissions.Emissions
         });
-
-        // console.log(garden);
-
-
-        // fetch("https://verdancy.capstone.ischool.uw.edu/v1/emissions/", {
-        //     method: 'GET',
-        //     headers: new Headers({
-        //         'Authorization': this.state.auth
-        //     })
-        // })
-        //     .then(res => res.json())
-        //     .then(
-        //         (result) => {
-        //             this.setState({
-        //                 isLoaded: true,
-        //                 totalEm: result.Emissions
-        //             });
-        //         },
-        //         (error) => {
-        //             this.setState({
-        //                 isLoaded: true,
-        //                 error
-        //             });
-        //         }
-        //     )
+            
     }
 
     render() {

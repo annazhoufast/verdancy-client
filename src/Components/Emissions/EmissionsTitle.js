@@ -1,6 +1,7 @@
 import React, {Component, useState} from 'react';
 import {Navbar, Nav, Button} from 'react-bootstrap';
 import {Row, Container} from "react-bootstrap";
+import emissions from '../../imgs/emissions/emissions.png';
 
 export class EmissionsTitle extends React.Component {
 
@@ -22,7 +23,7 @@ export class EmissionsTitle extends React.Component {
                     <h2>my emissions</h2>
                     <h1 id="emissions-num" className="page-content">{this.props.emissions}<span className="darkgreen-text h2size-text"> gCO2e saved</span></h1>
                 </div>
-                <img src="https://raw.githubusercontent.com/annazhoufast/verdancy-client/main/src/imgs/emissions/emissions.png?token=AKMRZNURTLNIKKYHSJ7A2XTAT374G"
+                <img src={emissions}
                 alt="woman holding up a globe" id="emissions-img" className="right-stuff"/>
               </Row>
               <div className="co2e-info">

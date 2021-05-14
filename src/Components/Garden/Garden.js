@@ -4,6 +4,10 @@ import {Button, Row, Col} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 
 export class Garden extends React.Component {
+
+    componentDidMount() {
+        window.scrollTo(0, 0)
+      }
     render() {
         return (
           <section>

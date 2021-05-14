@@ -2,6 +2,10 @@ import React, {Component} from 'react';
 import {AdviceCardGroup} from './AdviceCardGroup';
 
 export class Advice extends React.Component {
+
+    componentDidMount() {
+        window.scrollTo(0, 0)
+      }
     render() {
         return (
           <section>

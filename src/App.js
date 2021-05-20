@@ -16,7 +16,7 @@ import {Search} from './Components/Search/Search';
 import {LandingPage} from './Components/LandingPage/LandingPage';
 import SignUp from './Components/Auth/Components/SignUp/SignUp';
 import SignIn from './Components/Auth/Components/SignIn/SignIn';
-import Auth from './Components/Auth/Auth';
+import ischool from './imgs/landing/ischool.png'
 import {SinglePlant} from './Components/SinglePlant/SinglePlant';
 import './App.css';
 import './index.css';
@@ -202,7 +202,7 @@ class App extends Component {
                     <Link className="link" to="/landing">Learn more about our team and our project!</Link>
                   </div>
                   <div>
-                    <img src="https://raw.githubusercontent.com/annazhoufast/verdancy-client/main/src/imgs/landing/ischool.png?token=AKMRZNTVQB6HRGYOSV46SL3AUIJD6"
+                    <img src={ischool}
                     alt="iSchool logo"/>
                   </div>
                 </div>

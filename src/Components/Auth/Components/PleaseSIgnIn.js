@@ -5,6 +5,8 @@ import {
     Route,
     Link
 } from 'react-router-dom';
+// import carrot from '../../../imgs/carrot.png';
+import carrot from '../../../imgs/carrot.png'
 
 export class PleaseSignIn extends React.Component {
     render() {
@@ -16,7 +18,7 @@ export class PleaseSignIn extends React.Component {
                 <p>Please <Link to="/signup" className="link"><b>create an account</b></Link>,
                 or <Link to="/signin" className="link"><b>sign in</b></Link> if you already have one.</p>
                 <div className="centered">
-                  <img src="https://raw.githubusercontent.com/annazhoufast/verdancy-client/main/src/imgs/carrot.png?token=AKMRZNXBLK7B7VMG4O6REP3AUSQ2Q"
+                  <img src={carrot}
                   alt="sad carrot"/>
                 </div>
             </div>
